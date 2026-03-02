@@ -1,53 +1,61 @@
-// Mapeamento central de imagens
-// Imagens do escritório e Unsplash (uso gratuito)
+// Mapeamento central de imagens — Instituto Vascular
+// Imagens do Unsplash (uso gratuito)
 
 export const IMAGES = {
-  // Foto dos sócios
-  lawyer: '/images/cerbelera_oliveira_team_photo.webp',
+  // Foto do médico / equipe
+  doctor: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1200&q=80',
 
-  // Hero background - Estátua da Justiça
-  hero: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80',
+  // Hero background - Medicina vascular
+  hero: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=1920&q=80',
 
-  // Escritório / ambiente profissional
-  office:
-    'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
+  // Clínica / ambiente médico
+  clinic: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80',
 
-  // Logotipo
-  logo: '/images/cerbelera_oliveira_logo_cover.webp',
-  logoAlt: '/images/cerbelera_oliveira_profile_photo.webp',
-  logoMini: '/images/cerbelera_oliveira_logo_cover.webp',
+  // Equipamentos médicos
+  equipment: 'https://images.unsplash.com/photo-1551190822-a9ce113ac100?auto=format&fit=crop&w=1200&q=80',
+
+  // Consulta médica
+  consultation: 'https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=1200&q=80',
+
+  // Cirurgia / procedimento
+  surgery: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80',
 } as const;
 
-// Imagens por área de atuação (cada uma única, sem repetição)
-export const AREA_IMAGES: Record<string, string> = {
-  'Direito Trabalhista':
-    'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80',
-  'Direito Criminal':
-    'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=800&q=80',
-  'Direito Civil':
-    'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80',
-  'Direito Empresarial':
-    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-  'Direito Administrativo':
-    'https://images.unsplash.com/photo-1575505586569-646b2ca898fc?auto=format&fit=crop&w=800&q=80',
-  'Cálculos Judiciais':
-    'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80',
+// Imagens por especialidade
+export const SPECIALTY_IMAGES: Record<string, string> = {
+  'Varizes':
+    'https://images.unsplash.com/photo-1559757175-7cb057fba93c?auto=format&fit=crop&w=800&q=80',
+  'Trombose Venosa':
+    'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80',
+  'Cirurgia Vascular':
+    'https://images.unsplash.com/photo-1551190822-a9ce113ac100?auto=format&fit=crop&w=800&q=80',
+  'Aneurisma':
+    'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=800&q=80',
+  'Insuficiência Venosa':
+    'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
+  'Escleroterapia':
+    'https://images.unsplash.com/photo-1631815588090-d4bfec5b16d?auto=format&fit=crop&w=800&q=80',
+  'Doppler Vascular':
+    'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80',
+  'Doença Arterial':
+    'https://images.unsplash.com/photo-1559757175-7cb057fba93c?auto=format&fit=crop&w=800&q=80',
+  'Saúde Vascular':
+    'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80',
+  'Prevenção':
+    'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
 };
 
-// Imagens por categoria de blog (reutiliza áreas + fallback para 'Direito' genérico)
+// Imagens por categoria de blog
 export const BLOG_IMAGES: Record<string, string> = {
-  ...AREA_IMAGES,
-  'Direito Penal':
-    'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=800&q=80',
-  Direito:
-    'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80',
+  ...SPECIALTY_IMAGES,
+  'Saúde': 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80',
 };
 
 // Imagem padrão (fallback)
 export const DEFAULT_IMAGE =
-  'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80';
+  'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80';
 
 // Helper
 export function getCategoryImage(category: string): string {
-  return BLOG_IMAGES[category] || AREA_IMAGES[category] || DEFAULT_IMAGE;
+  return BLOG_IMAGES[category] || SPECIALTY_IMAGES[category] || DEFAULT_IMAGE;
 }

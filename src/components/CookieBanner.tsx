@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cookie, X, Shield } from 'lucide-react';
-import Link from 'next/link';
+import { X, Shield } from 'lucide-react';
 
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,43 +38,26 @@ export default function CookieBanner() {
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl border border-secondary-200 p-6 md:p-8">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                <Shield className="w-6 h-6 text-primary-500" />
+                <Shield className="w-6 h-6 text-primary-600" />
               </div>
-
               <div className="flex-1">
-                <h3 className="text-lg font-serif font-bold text-primary-500 mb-2">
+                <h3 className="text-lg font-serif font-bold text-primary-800 mb-2">
                   Privacidade e Cookies
                 </h3>
-                <p className="text-secondary-600 text-sm leading-relaxed mb-4">
+                <p className="text-secondary-500 text-sm leading-relaxed mb-4">
                   Utilizamos cookies para melhorar sua experiência de navegação.
                   Em conformidade com a LGPD (Lei nº 13.709/2018), solicitamos
-                  seu consentimento para o uso de cookies não essenciais. Para
-                  mais informações, consulte nossa{' '}
-                  <Link
-                    href="/politica-privacidade"
-                    className="text-primary-500 underline hover:text-gold-500"
-                  >
-                    Política de Privacidade
-                  </Link>
-                  .
+                  seu consentimento para o uso de cookies não essenciais.
                 </p>
-
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button
-                    onClick={acceptCookies}
-                    className="btn-gold text-sm py-2 px-6"
-                  >
+                  <button onClick={acceptCookies} className="btn-primary text-sm py-2 px-6">
                     Aceitar Todos
                   </button>
-                  <button
-                    onClick={declineCookies}
-                    className="btn-outline text-sm py-2 px-6"
-                  >
+                  <button onClick={declineCookies} className="btn-outline text-sm py-2 px-6">
                     Apenas Essenciais
                   </button>
                 </div>
               </div>
-
               <button
                 onClick={declineCookies}
                 className="p-2 text-secondary-400 hover:text-secondary-600 transition-colors"

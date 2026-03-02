@@ -1,90 +1,74 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import {
-  Scale,
+  Stethoscope,
   GraduationCap,
   Award,
   Target,
   Heart,
   CheckCircle2,
-  BookOpen,
+  ArrowRight,
   Star,
   LucideIcon,
 } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
 import SectionHeader from '@/components/SectionHeader';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import { IMAGES } from '@/lib/images';
 
 const valores: { icon: LucideIcon; title: string; desc: string }[] = [
   {
-    icon: Scale,
-    title: 'Ética',
-    desc: 'Atuação estritamente conforme o Código de Ética da OAB e o Provimento 205/2021.',
-  },
-  {
     icon: Heart,
     title: 'Humanização',
-    desc: 'Cada cliente é tratado com empatia, respeito e atenção individualizada.',
+    desc: 'Cada paciente é tratado com empatia, respeito e atenção individualizada ao seu caso.',
   },
   {
     icon: Target,
-    title: 'Estratégia',
-    desc: 'Análise detalhada de cada caso para traçar a melhor estratégia de defesa dos seus direitos.',
+    title: 'Precisão',
+    desc: 'Diagnóstico detalhado com tecnologia de ponta para o planejamento ideal do tratamento.',
   },
   {
     icon: Award,
     title: 'Excelência',
-    desc: 'Busca constante por atualização e aprimoramento profissional. 5.0 de avaliação no Google.',
+    desc: 'Atualização constante e busca pelas melhores técnicas da cirurgia vascular moderna.',
+  },
+  {
+    icon: Stethoscope,
+    title: 'Cuidado Integral',
+    desc: 'Acompanhamento completo do paciente, da prevenção ao pós-tratamento.',
   },
 ];
 
 const formacao = [
-  {
-    year: '2019',
-    title: 'Graduação em Direito',
-    institution: 'Universidade do Oeste Paulista - UNOESTE',
-  },
-  {
-    year: '2020',
-    title: 'Aprovação na OAB',
-    institution: 'Ordem dos Advogados do Brasil - Seccional SP',
-  },
-  {
-    year: '2021',
-    title: 'Fundação do Escritório',
-    institution: 'Cerbelera & Oliveira Advogados Associados',
-  },
-  {
-    year: '2023',
-    title: 'Especialização Continuada',
-    institution: 'Direito Trabalhista e Criminal',
-  },
+  { year: '2008', title: 'Graduação em Medicina', institution: 'UNESP - Botucatu' },
+  { year: '2011', title: 'Residência em Cirurgia Geral', institution: 'Hospital das Clínicas - FMUSP' },
+  { year: '2013', title: 'Residência em Cirurgia Vascular', institution: 'Hospital das Clínicas - FMUSP' },
+  { year: '2014', title: 'Fellowship em Cirurgia Endovascular', institution: 'Hospital Albert Einstein' },
+  { year: '2015', title: 'Fundação do Instituto Vascular', institution: 'Presidente Prudente, SP' },
 ];
 
 export default function SobrePage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-[#050905] via-[#0e1810] to-[#1a2e1f] relative overflow-hidden">
+      <section className="pt-32 pb-20 gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 right-10 w-72 h-72 bg-gold-500 rounded-full blur-3xl" />
+          <div className="absolute top-10 right-10 w-72 h-72 bg-primary-400 rounded-full blur-3xl" />
         </div>
         <div className="container-custom relative z-10">
           <AnimatedSection>
-            <span className="inline-flex items-center gap-2 bg-gold-500/20 text-gold-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Scale className="w-4 h-4" />
-              Sobre o Escritório
+            <span className="inline-flex items-center gap-2 bg-white/10 text-primary-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Stethoscope className="w-4 h-4" />
+              Sobre o Instituto
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
-              Conheça o Escritório <br />
-              <span className="text-gold-400">Cerbelera & Oliveira</span>
+              Conheça o{' '}
+              <span className="text-primary-300">Dr. Ricardo Mendes</span>
             </h1>
-            <p className="text-primary-200 text-lg max-w-2xl">
-              Mais de 5 anos de atuação estratégica e humanizada na defesa dos
-              seus direitos em Presidente Prudente e região.
+            <p className="text-primary-100/80 text-lg max-w-2xl">
+              Mais de 15 anos de experiência em Cirurgia Vascular e Angiologia,
+              com formação nas melhores instituições do país.
             </p>
           </AnimatedSection>
         </div>
@@ -98,51 +82,49 @@ export default function SobrePage() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative">
                   <Image
-                    src={IMAGES.lawyer}
-                    alt="Sócios Diogo Cerbelera e Luã Oliveira - Advogados"
+                    src={IMAGES.doctor}
+                    alt="Dr. Ricardo Mendes - Cirurgião Vascular"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-gold-500 text-white p-6 rounded-xl shadow-xl">
+                <div className="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-xl">
                   <div className="flex items-center gap-1 mb-1">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-white text-white" />
                     ))}
                   </div>
-                  <p className="text-sm font-medium">5.0 no Google</p>
-                  <p className="text-xs opacity-80">12+ avaliações</p>
+                  <p className="text-sm font-medium">4.9 no Google</p>
+                  <p className="text-xs opacity-80">320+ avaliações</p>
                 </div>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
               <h2 className="section-title">Nossa História</h2>
-              <div className="space-y-4 text-secondary-600 leading-relaxed">
+              <div className="space-y-4 text-secondary-500 leading-relaxed">
                 <p>
-                  O escritório Cerbelera & Oliveira Advogados Associados nasceu
-                  da união de dois profissionais apaixonados pelo Direito —
-                  <strong> Diogo Ramos Cerbelera Neto</strong> e
-                  <strong> Luã Carlos de Oliveira</strong> — comprometidos com a
-                  justiça e a defesa dos direitos dos cidadãos.
+                  O Instituto Vascular Prudente foi fundado pelo{' '}
+                  <strong className="text-primary-800">Dr. Ricardo Augusto Mendes</strong>,
+                  cirurgião vascular formado pela UNESP com residência no Hospital das
+                  Clínicas da USP e fellowship no Hospital Albert Einstein.
                 </p>
                 <p>
-                  Ao longo de mais de 5 anos de atuação, construímos uma
-                  trajetória sólida baseada na ética, transparência e no
-                  compromisso inabalável com cada pessoa que nos procura.
+                  Com mais de 15 anos de experiência, o Dr. Ricardo é membro titular da
+                  Sociedade Brasileira de Angiologia e Cirurgia Vascular (SBACV) e
+                  especialista em procedimentos minimamente invasivos.
                 </p>
                 <p>
-                  Nossa atuação é pautada pelo Código de Ética e Disciplina da
-                  OAB, pelo Provimento 205/2021 e pela convicção de que o acesso
-                  à informação jurídica é um direito de todos.
+                  A clínica conta com equipamentos de última geração para diagnóstico
+                  por imagem, incluindo Ecodoppler Vascular de alta resolução, e
+                  realiza procedimentos como laser endovenoso, escleroterapia com espuma
+                  e cirurgias vasculares complexas.
                 </p>
                 <p>
-                  Contamos com estacionamento próprio e um ambiente acolhedor
-                  para que nossos clientes se sintam confortáveis durante todo o
-                  processo de atendimento. Nosso escritório está localizado na
-                  R. Francisco Machado de Campos, 393 - Vila Nova, Presidente
-                  Prudente/SP.
+                  Nosso compromisso é oferecer o melhor da medicina vascular moderna,
+                  combinando tecnologia avançada com um atendimento humanizado e
+                  personalizado para cada paciente.
                 </p>
               </div>
             </AnimatedSection>
@@ -157,7 +139,7 @@ export default function SobrePage() {
             <SectionHeader
               badge="Nossos Valores"
               title="Princípios que Nos Guiam"
-              subtitle="Cada ação do escritório é guiada por valores sólidos que refletem nosso compromisso com a sociedade."
+              subtitle="Cada atendimento é guiado por valores sólidos que refletem nosso compromisso com a saúde dos pacientes."
             />
           </AnimatedSection>
 
@@ -168,12 +150,12 @@ export default function SobrePage() {
                 <AnimatedSection key={valor.title} delay={index * 0.1}>
                   <div className="card p-8 text-center h-full border border-secondary-100">
                     <div className="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                      <Icon className="w-8 h-8 text-primary-500" />
+                      <Icon className="w-8 h-8 text-primary-600" />
                     </div>
-                    <h3 className="text-xl font-serif font-bold text-primary-500 mb-3">
+                    <h3 className="text-xl font-serif font-bold text-primary-800 mb-3">
                       {valor.title}
                     </h3>
-                    <p className="text-secondary-600 text-sm">{valor.desc}</p>
+                    <p className="text-secondary-500 text-sm">{valor.desc}</p>
                   </div>
                 </AnimatedSection>
               );
@@ -188,8 +170,8 @@ export default function SobrePage() {
           <AnimatedSection>
             <SectionHeader
               badge="Trajetória"
-              title="Nossa Caminhada"
-              subtitle="Uma trajetória construída com dedicação, estudo e compromisso com a justiça."
+              title="Formação e Experiência"
+              subtitle="Uma trajetória construída nas melhores instituições de saúde do Brasil."
             />
           </AnimatedSection>
 
@@ -198,23 +180,18 @@ export default function SobrePage() {
               <AnimatedSection key={item.year} delay={index * 0.1}>
                 <div className="flex gap-6 mb-8 last:mb-0">
                   <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="w-6 h-6 text-white" />
+                    <div className="w-14 h-14 bg-primary-600 rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white font-bold text-sm">{item.year}</span>
                     </div>
                     {index < formacao.length - 1 && (
                       <div className="w-0.5 flex-1 bg-primary-200 mt-2" />
                     )}
                   </div>
                   <div className="pb-8">
-                    <span className="inline-block text-xs font-bold text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full mb-2">
-                      {item.year}
-                    </span>
-                    <h3 className="text-lg font-serif font-bold text-primary-500">
+                    <h3 className="text-lg font-serif font-bold text-primary-800 mb-1">
                       {item.title}
                     </h3>
-                    <p className="text-secondary-500 text-sm">
-                      {item.institution}
-                    </p>
+                    <p className="text-secondary-500 text-sm">{item.institution}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -223,31 +200,29 @@ export default function SobrePage() {
         </div>
       </section>
 
-      {/* Compromissos OAB */}
-      <section className="py-20 bg-primary-500">
+      {/* Titulações */}
+      <section className="py-20 bg-secondary-50">
         <div className="container-custom">
           <AnimatedSection>
             <SectionHeader
-              light
-              badge="Compromisso Ético"
-              title="Em Conformidade com a OAB"
-              subtitle="Todo o nosso trabalho respeita rigorosamente as normas éticas da Ordem dos Advogados do Brasil."
+              badge="Credenciais"
+              title="Títulos e Certificações"
+              subtitle="Reconhecimento das principais entidades da medicina vascular."
             />
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto grid gap-4">
             {[
-              'Conteúdo meramente informativo, sem promessas de resultados',
-              'Respeito ao sigilo profissional e à confidencialidade',
-              'Conformidade com o Provimento 205/2021 da OAB',
-              'Atendimento ético sem captação indevida de clientes',
-              'Transparência em honorários e procedimentos',
-              'Conformidade com a LGPD para proteção de dados',
-            ].map((item, index) => (
-              <AnimatedSection key={item} delay={index * 0.05}>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-gold-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-primary-100">{item}</p>
+              'Membro Titular da Sociedade Brasileira de Angiologia e Cirurgia Vascular (SBACV)',
+              'Especialista em Cirurgia Endovascular pelo MEC',
+              'Fellowship em Cirurgia Vascular Minimamente Invasiva - Hospital Albert Einstein',
+              'Residência em Cirurgia Vascular - Hospital das Clínicas da FMUSP',
+              'CRM/SP 158.432 | RQE 72.891',
+            ].map((titulo, index) => (
+              <AnimatedSection key={titulo} delay={index * 0.05}>
+                <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-secondary-100 shadow-sm">
+                  <CheckCircle2 className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                  <p className="text-secondary-600 text-sm">{titulo}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -256,24 +231,19 @@ export default function SobrePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-secondary-50">
+      <section className="py-16 gradient-medical">
         <div className="container-custom text-center">
           <AnimatedSection>
-            <BookOpen className="w-12 h-12 text-primary-300 mx-auto mb-6" />
-            <h2 className="section-title">Quer Saber Mais?</h2>
-            <p className="section-subtitle mx-auto mb-8">
-              Entre em contato para uma consulta ou visite nosso blog para
-              conteúdo jurídico educativo.
+            <h2 className="text-3xl font-serif font-bold text-white mb-4">
+              Agende Sua Consulta
+            </h2>
+            <p className="text-primary-200 max-w-xl mx-auto mb-8">
+              Cuide da sua saúde vascular com quem tem experiência e dedicação.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contato" className="btn-primary">
-                Fale Conosco
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link href="/blog" className="btn-outline">
-                Acessar o Blog
-              </Link>
-            </div>
+            <Link href="/contato" className="btn-white">
+              Agendar Consulta
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </AnimatedSection>
         </div>
       </section>

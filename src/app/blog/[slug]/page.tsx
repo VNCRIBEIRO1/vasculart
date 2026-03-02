@@ -1,71 +1,62 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { ArrowLeft, Calendar, Clock, Scale, User } from 'lucide-react';
-import AnimatedSection from '@/components/AnimatedSection';
-import { getCategoryImage } from '@/lib/images';
-import { articles, defaultArticle } from '@/lib/articles';
+import Link from 'next/link';
+import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import { articles, Article } from '@/lib/articles';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const article = articles[slug] || defaultArticle;
+export function generateStaticParams() {
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const article = articles.find((a) => a.slug === params.slug);
+  if (!article) return {};
+
   return {
-    title: article.title,
-    description: article.content[0],
+    title: `${article.title} | Instituto Vascular Prudente`,
+    description: article.excerpt,
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      images: [{ url: article.image }],
+    },
   };
 }
 
-export function generateStaticParams() {
-  return Object.keys(articles).map((slug) => ({ slug }));
-}
+export default function ArticlePage({ params }: { params: { slug: string } }) {
+  const article = articles.find((a: Article) => a.slug === params.slug);
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const article = articles[slug] || defaultArticle;
+  if (!article) {
+    notFound();
+  }
 
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-[#050905] via-[#0e1810] to-[#1a2e1f] relative overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src={getCategoryImage(article.category)}
-            alt={article.category}
-            fill
-            className="object-cover opacity-[0.10]"
-            sizes="100vw"
-          />
-        </div>
+      <section className="pt-32 pb-16 gradient-hero relative overflow-hidden">
         <div className="container-custom relative z-10">
-          <AnimatedSection>
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-primary-300 hover:text-gold-400 transition-colors text-sm mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Voltar para o Blog
-            </Link>
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-primary-200 hover:text-white transition-colors mb-8"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Voltar ao Blog
+          </Link>
 
-            <span className="inline-block text-xs font-medium text-gold-400 bg-gold-500/20 px-3 py-1 rounded-full mb-4">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-1 bg-white/10 text-primary-200 px-3 py-1 rounded-full text-xs font-medium mb-4">
+              <Tag className="w-3 h-3" />
               {article.category}
             </span>
-
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 max-w-4xl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight">
               {article.title}
             </h1>
-
-            <div className="flex flex-wrap items-center gap-6 text-primary-300 text-sm">
+            <div className="flex flex-wrap items-center gap-6 text-primary-200 text-sm">
               <span className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                Cerbelera & Oliveira Advogados
+                {article.author}
               </span>
               <span className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -73,64 +64,81 @@ export default async function BlogPostPage({
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                {article.readTime} de leitura
+                {article.readTime}
               </span>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 
-      {/* Conteúdo */}
+      {/* Image */}
+      <section className="bg-white">
+        <div className="container-custom -mt-8">
+          <div className="aspect-video w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl relative">
+            <Image
+              src={article.image}
+              alt={article.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 896px"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Content */}
       <section className="py-16 bg-white">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <AnimatedSection>
-              <article className="prose prose-lg max-w-none">
-                {article.content.map((item, index) =>
-                  item.startsWith('## ') ? (
-                    <h2
-                      key={index}
-                      className="text-2xl font-serif font-bold text-secondary-800 mt-10 mb-4 pb-2 border-b border-gold-200"
-                    >
-                      {item.slice(3)}
-                    </h2>
-                  ) : (
-                    <p
-                      key={index}
-                      className="text-secondary-600 leading-relaxed mb-6"
-                    >
-                      {item}
-                    </p>
-                  )
-                )}
-              </article>
+          <article className="max-w-3xl mx-auto">
+            <div
+              className="prose prose-lg max-w-none
+                prose-headings:font-serif prose-headings:text-primary-800
+                prose-p:text-secondary-600 prose-p:leading-relaxed
+                prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline
+                prose-strong:text-primary-700
+                prose-li:text-secondary-600
+                prose-blockquote:border-primary-500 prose-blockquote:bg-primary-50 prose-blockquote:rounded-r-xl prose-blockquote:py-1
+              "
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
+          </article>
+        </div>
+      </section>
 
-              <div className="mt-12 bg-primary-50 border border-primary-200 rounded-xl p-6">
-                <div className="flex items-start gap-3">
-                  <Scale className="w-5 h-5 text-primary-500 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-medium text-primary-600 mb-1">
-                      Aviso Legal
-                    </p>
-                    <p className="text-primary-500 text-sm">
-                      Este artigo tem caráter meramente informativo e educativo,
-                      nos termos do Provimento 205/2021 da OAB. Não constitui
-                      aconselhamento jurídico. Para orientação específica,
-                      procure um advogado.
-                    </p>
+      {/* Related articles */}
+      <section className="py-16 bg-secondary-50">
+        <div className="container-custom">
+          <h2 className="text-2xl font-serif font-bold text-primary-800 text-center mb-10">
+            Outros Artigos
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {articles
+              .filter((a) => a.slug !== article.slug)
+              .slice(0, 3)
+              .map((related) => (
+                <Link
+                  key={related.slug}
+                  href={`/blog/${related.slug}`}
+                  className="card p-4 border border-secondary-100 hover:border-primary-200 transition-colors group"
+                >
+                  <div className="aspect-video relative rounded-lg overflow-hidden mb-3">
+                    <Image
+                      src={related.image}
+                      alt={related.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                   </div>
-                </div>
-              </div>
-
-              <div className="mt-12 text-center">
-                <p className="text-secondary-600 mb-4">
-                  Ficou com dúvidas sobre este tema?
-                </p>
-                <Link href="/contato" className="btn-primary">
-                  Fale Conosco
+                  <span className="text-xs text-primary-600 font-medium">
+                    {related.category}
+                  </span>
+                  <h3 className="text-sm font-serif font-bold text-primary-800 mt-1 line-clamp-2 group-hover:text-primary-600 transition-colors">
+                    {related.title}
+                  </h3>
                 </Link>
-              </div>
-            </AnimatedSection>
+              ))}
           </div>
         </div>
       </section>

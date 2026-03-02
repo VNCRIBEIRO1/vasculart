@@ -3,27 +3,27 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, Scale, Shield, Users } from 'lucide-react';
+import { ArrowRight, Heart, Shield, Award, Stethoscope } from 'lucide-react';
 import { IMAGES } from '@/lib/images';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#050905] via-[#0e1810] to-[#1a2e1f] overflow-hidden">
-      {/* Background Photo - Estátua da Justiça */}
+    <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0">
         <Image
           src={IMAGES.hero}
-          alt="Justiça"
+          alt="Medicina Vascular"
           fill
-          className="object-cover opacity-[0.12]"
+          className="object-cover opacity-[0.15]"
           priority
           sizes="100vw"
         />
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary-400/10 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-10 w-72 h-72 bg-primary-400/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl" />
 
       <div className="container-custom relative z-10 pt-32 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -33,40 +33,40 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 bg-gold-500/20 text-gold-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Scale className="w-4 h-4" />
-              Advocacia Estratégica e Humanizada
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-primary-200 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/10">
+              <Stethoscope className="w-4 h-4" />
+              Cirurgia Vascular e Angiologia
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
-              Atuação Estratégica na{' '}
-              <span className="text-gold-400">Defesa</span> dos Seus{' '}
-              <span className="text-gold-400">Direitos</span>
+              Sua <span className="text-primary-300">Saúde Vascular</span>{' '}
+              em Boas Mãos
             </h1>
 
-            <p className="text-lg text-primary-200 leading-relaxed mb-8 max-w-lg">
-              Cerbelera & Oliveira Advogados Associados — Escritório em
-              Presidente Prudente, SP. Atuação ética e humanizada nas áreas de
-              Direito Trabalhista, Criminal, Civil, Empresarial e
-              Administrativo.
+            <p className="text-lg text-primary-100/80 leading-relaxed mb-8 max-w-lg">
+              Instituto Vascular Prudente — referência em diagnóstico e
+              tratamento de doenças vasculares. Tecnologia de ponta, procedimentos
+              minimamente invasivos e cuidado humanizado.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contato" className="btn-gold text-base">
-                Agende uma Consulta
+              <Link href="/contato" className="btn-primary text-base bg-primary-500 hover:bg-primary-600">
+                Agende sua Consulta
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                href="/areas-de-atuacao"
-                className="btn-outline border-primary-300 text-primary-100 hover:bg-primary-100/10 hover:text-white text-base"
+                href="/especialidades"
+                className="btn-outline border-primary-300/50 text-primary-100 hover:bg-white/10 hover:text-white text-base"
               >
-                Conheça Nossas Áreas
+                Nossas Especialidades
               </Link>
             </div>
 
-            <p className="text-primary-400 text-xs mt-6">
-              OAB/SP • Este site tem caráter meramente informativo.
-            </p>
+            <div className="flex items-center gap-6 mt-8 text-primary-300/60 text-sm">
+              <span>CRM/SP 158.432</span>
+              <span>•</span>
+              <span>RQE 72.891</span>
+            </div>
           </motion.div>
 
           {/* Cards de destaque */}
@@ -74,23 +74,23 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:grid grid-cols-1 gap-6"
+            className="hidden lg:grid grid-cols-1 gap-5"
           >
             {[
               {
+                icon: Heart,
+                title: 'Varizes e Microvarizes',
+                desc: 'Tratamento com laser endovenoso e escleroterapia. Procedimentos ambulatoriais com recuperação rápida.',
+              },
+              {
                 icon: Shield,
-                title: 'Compromisso Ético',
-                desc: 'Atuação em conformidade com o Código de Ética da OAB e o Provimento 205/2021.',
+                title: 'Diagnóstico Avançado',
+                desc: 'Ecodoppler Vascular de última geração para diagnóstico preciso e planejamento do tratamento.',
               },
               {
-                icon: Users,
-                title: 'Atendimento Humanizado',
-                desc: 'Cada caso é tratado com dedicação, atenção e respeito à individualidade do cliente.',
-              },
-              {
-                icon: Scale,
-                title: 'Experiência Comprovada',
-                desc: 'Mais de 5 anos de atuação em diversas áreas do Direito, com 5.0 de avaliação no Google.',
+                icon: Award,
+                title: '+15 Anos de Experiência',
+                desc: 'Membro titular da SBACV. Especialização no Hospital das Clínicas da USP e Albert Einstein.',
               },
             ].map((item, index) => (
               <motion.div
@@ -98,17 +98,17 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/15 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-gold-400" />
+                  <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-6 h-6 text-primary-300" />
                   </div>
                   <div>
-                    <h3 className="text-white font-serif font-bold mb-1">
+                    <h3 className="text-white font-semibold mb-1">
                       {item.title}
                     </h3>
-                    <p className="text-primary-300 text-sm">{item.desc}</p>
+                    <p className="text-primary-200/70 text-sm">{item.desc}</p>
                   </div>
                 </div>
               </motion.div>

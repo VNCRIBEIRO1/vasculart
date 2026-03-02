@@ -25,7 +25,7 @@ export default function SectionHeader({
           className={`inline-block text-sm font-medium px-4 py-1.5 rounded-full mb-4 ${
             light
               ? 'bg-white/20 text-white'
-              : 'bg-primary-50 text-primary-500'
+              : 'bg-primary-50 text-primary-700'
           }`}
         >
           {badge}
@@ -33,7 +33,7 @@ export default function SectionHeader({
       )}
       <h2
         className={`section-title ${
-          light ? 'text-white' : ''
+          light ? '!text-white' : ''
         } ${centered ? 'mx-auto' : ''}`}
       >
         {title}
@@ -41,7 +41,7 @@ export default function SectionHeader({
       {subtitle && (
         <p
           className={`section-subtitle ${
-            light ? 'text-primary-200' : ''
+            light ? '!text-primary-200' : ''
           } ${centered ? 'mx-auto' : ''}`}
         >
           {subtitle}

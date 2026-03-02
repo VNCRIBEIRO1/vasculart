@@ -28,9 +28,8 @@ export default function BlogCard({
   return (
     <AnimatedSection delay={delay}>
       <Link href={`/blog/${slug}`} className="block group">
-        <article className="card h-full border border-secondary-100 hover:border-gold-400/50 group-hover:-translate-y-1">
-          {/* Photo */}
-          <div className="relative h-48 overflow-hidden rounded-t-xl">
+        <article className="card h-full border border-secondary-100 hover:border-primary-300 group-hover:-translate-y-1">
+          <div className="relative h-48 overflow-hidden rounded-t-2xl">
             <Image
               src={getCategoryImage(category)}
               alt={category}
@@ -42,15 +41,15 @@ export default function BlogCard({
           </div>
 
           <div className="p-6">
-            <span className="inline-block text-xs font-medium text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full mb-3">
+            <span className="inline-block text-xs font-medium text-primary-700 bg-primary-50 px-3 py-1 rounded-full mb-3">
               {category}
             </span>
 
-            <h3 className="text-lg font-serif font-bold text-primary-500 mb-2 group-hover:text-gold-600 transition-colors line-clamp-2">
+            <h3 className="text-lg font-serif font-bold text-primary-800 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
               {title}
             </h3>
 
-            <p className="text-secondary-600 text-sm leading-relaxed mb-4 line-clamp-3">
+            <p className="text-secondary-500 text-sm leading-relaxed mb-4 line-clamp-3">
               {excerpt}
             </p>
 
@@ -65,7 +64,7 @@ export default function BlogCard({
                   {readTime}
                 </span>
               </div>
-              <ArrowRight className="w-4 h-4 text-gold-500 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 text-primary-500 group-hover:translate-x-1 transition-transform" />
             </div>
           </div>
         </article>

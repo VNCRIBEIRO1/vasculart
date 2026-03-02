@@ -1,55 +1,52 @@
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import CanvasLogo from './CanvasLogo';
+import { MapPin, Phone, Mail, Clock, Heart } from 'lucide-react';
 
-const areas = [
-  'Direito Civil',
-  'Direito Trabalhista',
-  'Direito Criminal',
-  'Direito Empresarial',
-  'Direito Administrativo',
-  'Cálculos Judiciais',
+const especialidades = [
+  'Varizes e Microvarizes',
+  'Trombose Venosa',
+  'Cirurgia Vascular',
+  'Escleroterapia',
+  'Doppler Vascular',
+  'Doença Arterial',
 ];
 
 const links = [
   { name: 'Início', href: '/' },
   { name: 'Sobre', href: '/sobre' },
-  { name: 'Áreas de Atuação', href: '/areas-de-atuacao' },
+  { name: 'Especialidades', href: '/especialidades' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contato', href: '/contato' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#0e1810] to-[#050905] text-primary-100">
+    <footer className="bg-gradient-to-b from-primary-900 to-primary-950 text-primary-100">
       {/* Conteúdo principal */}
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Coluna 1 - Sobre */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <CanvasLogo
-                src="/images/cerbelera_oliveira_logo_cover.webp"
-                alt="Cerbelera & Oliveira"
-                width={40}
-                height={40}
-                className="brightness-0 invert"
-              />
+              <div className="w-10 h-10 bg-primary-500 rounded-xl flex items-center justify-center">
+                <Heart className="w-5 h-5 text-white" />
+              </div>
               <div>
                 <h3 className="text-white font-serif font-bold text-lg">
-                  Cerbelera & Oliveira
+                  Instituto Vascular
                 </h3>
                 <p className="text-xs tracking-wider uppercase text-primary-300">
-                  Advogados Associados
+                  Presidente Prudente
                 </p>
               </div>
             </div>
             <p className="text-primary-300 text-sm leading-relaxed mb-4">
-              Escritório de advocacia comprometido com a excelência e a ética
-              profissional, oferecendo atuação estratégica e humanizada em
-              Presidente Prudente e região.
+              Clínica especializada em Cirurgia Vascular e Angiologia, oferecendo
+              diagnóstico e tratamento de doenças vasculares com tecnologia de
+              ponta e atendimento humanizado.
             </p>
-            <p className="text-gold-400 text-sm font-medium">OAB/SP</p>
+            <p className="text-primary-400 text-sm font-medium">
+              CRM/SP 158.432 • RQE 72.891
+            </p>
           </div>
 
           {/* Coluna 2 - Links */}
@@ -62,7 +59,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-primary-300 hover:text-gold-400 transition-colors text-sm"
+                    className="text-primary-300 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -71,19 +68,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Coluna 3 - Áreas */}
+          {/* Coluna 3 - Especialidades */}
           <div>
             <h4 className="text-white font-serif font-bold text-lg mb-6">
-              Áreas de Atuação
+              Especialidades
             </h4>
             <ul className="space-y-3">
-              {areas.map((area) => (
-                <li key={area}>
+              {especialidades.map((esp) => (
+                <li key={esp}>
                   <Link
-                    href="/areas-de-atuacao"
-                    className="text-primary-300 hover:text-gold-400 transition-colors text-sm"
+                    href="/especialidades"
+                    className="text-primary-300 hover:text-white transition-colors text-sm"
                   >
-                    {area}
+                    {esp}
                   </Link>
                 </li>
               ))}
@@ -97,39 +94,39 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
                 <span className="text-primary-300 text-sm">
-                  R. Francisco Machado de Campos, 393
+                  Av. Washington Luiz, 1200
                   <br />
-                  Vila Nova
+                  Sala 302 - Ed. Medical Center
                   <br />
-                  Presidente Prudente - SP
-                  <br />
-                  CEP 19010-300
+                  Centro - Presidente Prudente/SP
                 </span>
               </li>
               <li>
                 <a
                   href="tel:+5518996101884"
-                  className="flex items-center gap-3 text-primary-300 hover:text-gold-400 transition-colors text-sm"
+                  className="flex items-center gap-3 text-primary-300 hover:text-white transition-colors text-sm"
                 >
-                  <Phone className="w-5 h-5 text-gold-400 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
                   (18) 99610-1884
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contato@cerbeleraoliveira.adv.br"
-                  className="flex items-center gap-3 text-primary-300 hover:text-gold-400 transition-colors text-sm"
+                  href="mailto:contato@institutovascular.med.br"
+                  className="flex items-center gap-3 text-primary-300 hover:text-white transition-colors text-sm"
                 >
-                  <Mail className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                  contato@cerbeleraoliveira.adv.br
+                  <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
+                  contato@institutovascular.med.br
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
+                <Clock className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
                 <span className="text-primary-300 text-sm">
-                  Seg a Sex, 08:00 às 18:00
+                  Seg a Sex: 08:00 – 18:00
+                  <br />
+                  Sáb: 08:00 – 12:00
                 </span>
               </li>
             </ul>
@@ -137,10 +134,10 @@ export default function Footer() {
             {/* Redes Sociais */}
             <div className="mt-6 flex items-center gap-4">
               <a
-                href="https://instagram.com/cerbelera.oliveira.adv"
+                href="https://instagram.com/institutovascular"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-300 hover:text-gold-400 transition-colors"
+                className="text-primary-300 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -148,10 +145,10 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com/cerbeleraoliveira.adv"
+                href="https://facebook.com/institutovascular"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-300 hover:text-gold-400 transition-colors"
+                className="text-primary-300 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -164,29 +161,15 @@ export default function Footer() {
       </div>
 
       {/* Barra inferior */}
-      <div className="border-t border-primary-700/30">
+      <div className="border-t border-primary-800/50">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-400 text-xs text-center md:text-left">
-            © {new Date().getFullYear()} Cerbelera & Oliveira Advogados
-            Associados. Todos os direitos reservados.
+            © {new Date().getFullYear()} Instituto Vascular Prudente. Todos os
+            direitos reservados.
           </p>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/politica-privacidade"
-              className="text-primary-400 hover:text-gold-400 text-xs transition-colors"
-            >
-              Política de Privacidade
-            </Link>
-            <Link
-              href="/termos-de-uso"
-              className="text-primary-400 hover:text-gold-400 text-xs transition-colors"
-            >
-              Termos de Uso
-            </Link>
-          </div>
-          <p className="text-primary-500 text-xs">
-            Este site tem caráter informativo, nos termos do Provimento 205/2021
-            da OAB.
+          <p className="text-primary-500 text-xs text-center">
+            Responsável Técnico: Dr. Ricardo Augusto Mendes — CRM/SP 158.432 |
+            RQE 72.891
           </p>
         </div>
       </div>

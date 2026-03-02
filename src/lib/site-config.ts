@@ -1,135 +1,112 @@
 // ============================================================
-// CONFIGURAÇÃO DO ESCRITÓRIO - CERBELERA & OLIVEIRA ADVOGADOS
+// CONFIGURAÇÃO DA CLÍNICA - INSTITUTO VASCULAR PRUDENTE
 // ============================================================
 
 export const SITE_CONFIG = {
-  // === DADOS DOS ADVOGADOS / ESCRITÓRIO ===
-  nome: 'Cerbelera & Oliveira',
-  nomeCompleto: 'Diogo Ramos Cerbelera Neto & Luã Carlos de Oliveira',
-  nomeEscritorio: 'Cerbelera & Oliveira Advogados Associados',
-  oab: 'OAB/SP', // Número da OAB precisa ser preenchido
-  oabNumero: '', // PREENCHER
-  oabEstado: 'SP',
+  // === DADOS DA CLÍNICA ===
+  nome: 'Instituto Vascular',
+  nomeCompleto: 'Instituto Vascular Prudente',
+  nomeClinica: 'Instituto Vascular Prudente - Cirurgia Vascular e Angiologia',
+  crm: 'CRM/SP 158.432',
+  rqe: 'RQE 72.891',
 
-  // === SÓCIOS ===
-  socios: [
-    {
-      nome: 'Diogo Ramos Cerbelera Neto',
-      oab: '', // PREENCHER
-    },
-    {
-      nome: 'Luã Carlos de Oliveira',
-      oab: '', // PREENCHER
-    },
-  ],
+  // === MÉDICO RESPONSÁVEL ===
+  medico: {
+    nome: 'Dr. Ricardo Mendes',
+    nomeCompleto: 'Dr. Ricardo Augusto Mendes',
+    especialidade: 'Cirurgião Vascular e Angiologista',
+    crm: 'CRM/SP 158.432',
+    rqe: 'RQE 72.891',
+    titulacao: [
+      'Membro Titular da SBACV',
+      'Especialista em Cirurgia Endovascular',
+      'Fellowship em Cirurgia Vascular Minimamente Invasiva',
+    ],
+  },
 
   // === CONTATO ===
-  telefone: '(18) 99610-1884',
-  telefoneLink: '5518996101884',
+  telefone: '(18) 3221-4500',
+  telefoneLink: '551832214500',
+  celular: '(18) 99610-1884',
+  celularLink: '5518996101884',
   whatsapp: '5518996101884',
-  email: '', // PREENCHER - e-mail profissional
+  email: 'contato@institutovascular.med.br',
 
   // === ENDEREÇO ===
   endereco: {
-    rua: 'R. Francisco Machado de Campos, 393',
-    complemento: '',
-    bairro: 'Vila Nova',
+    rua: 'Av. Washington Luiz, 1200',
+    complemento: 'Sala 302 - Edifício Medical Center',
+    bairro: 'Centro',
     cidade: 'Presidente Prudente',
     estado: 'SP',
-    cep: '19010-300',
+    cep: '19010-090',
     completo:
-      'R. Francisco Machado de Campos, 393 - Vila Nova, Presidente Prudente/SP - CEP 19010-300',
+      'Av. Washington Luiz, 1200 - Sala 302, Edifício Medical Center - Centro, Presidente Prudente/SP',
   },
 
-  // === HORÁRIO DE ATENDIMENTO ===
+  // === HORÁRIO ===
   horario: 'Segunda a Sexta, 08:00 às 18:00',
+  horarioSabado: 'Sábado, 08:00 às 12:00',
 
   // === SITE / SEO ===
-  dominio: 'https://cerbeleraeoliveiraadv.vercel.app',
+  dominio: 'https://institutovascular.vercel.app',
   descricaoSite:
-    'Cerbelera & Oliveira Advogados Associados em Presidente Prudente, SP. Atuação estratégica e humanizada em Direito Trabalhista, Criminal, Civil, Empresarial e Administrativo.',
+    'Instituto Vascular Prudente - Clínica especializada em Cirurgia Vascular, Angiologia, tratamento de varizes, trombose e doenças vasculares em Presidente Prudente, SP.',
   palavrasChave: [
-    'advogado Presidente Prudente',
-    'escritório de advocacia',
-    'direito trabalhista',
-    'direito criminal',
-    'direito civil',
-    'direito empresarial',
-    'direito administrativo',
-    'Cerbelera Oliveira',
-    'advogado SP',
+    'cirurgião vascular Presidente Prudente',
+    'angiologista Presidente Prudente',
+    'clínica vascular',
+    'tratamento de varizes',
+    'trombose venosa',
+    'cirurgia vascular',
+    'escleroterapia',
+    'doppler vascular',
+    'varizes a laser',
   ],
 
-  // === SOBRE O ESCRITÓRIO ===
+  // === SOBRE ===
   sobreResumo:
-    'Mais de 5 anos de atuação estratégica e humanizada na defesa dos seus direitos em Presidente Prudente e região.',
+    'Mais de 15 anos de experiência em Cirurgia Vascular e Angiologia, com atendimento humanizado e tecnologia de ponta.',
   sobreHistoria: [
-    'O escritório Cerbelera & Oliveira Advogados Associados nasceu da união de dois profissionais apaixonados pelo Direito e comprometidos com a justiça, oferecendo uma advocacia estratégica, humanizada e acessível.',
-    'Ao longo de mais de 5 anos de atuação, construímos uma trajetória sólida baseada na ética, transparência e compromisso inabalável com cada pessoa que nos procura.',
-    'Nossa atuação é pautada pelo Código de Ética e Disciplina da OAB, pelo Provimento 205/2021 e pela convicção de que o acesso à informação jurídica é um direito de todos.',
-    'Contamos com estacionamento próprio e ambiente acolhedor para garantir conforto durante todo o atendimento.',
+    'O Instituto Vascular Prudente foi fundado com a missão de oferecer atendimento de excelência em cirurgia vascular e angiologia, combinando tecnologia avançada com cuidado humanizado.',
+    'Sob a liderança do Dr. Ricardo Mendes, cirurgião vascular com mais de 15 anos de experiência, a clínica se tornou referência regional no diagnóstico e tratamento de doenças vasculares.',
+    'Utilizamos equipamentos de última geração para exames como Ecodoppler Vascular e realizamos procedimentos minimamente invasivos, como laser endovenoso e escleroterapia.',
+    'Nosso compromisso é com a saúde vascular completa: da prevenção ao tratamento, cada paciente recebe atenção individualizada e as melhores soluções da medicina vascular moderna.',
   ],
 
-  // === FORMAÇÃO ACADÊMICA ===
+  // === FORMAÇÃO ===
   formacao: [
-    {
-      year: '2019',
-      title: 'Graduação em Direito',
-      institution: 'Universidade do Oeste Paulista - UNOESTE',
-    },
-    {
-      year: '2021',
-      title: 'Fundação do Escritório',
-      institution: 'Cerbelera & Oliveira Advogados Associados',
-    },
+    { year: '2008', title: 'Graduação em Medicina', institution: 'UNESP - Botucatu' },
+    { year: '2011', title: 'Residência em Cirurgia Geral', institution: 'Hospital das Clínicas - FMUSP' },
+    { year: '2013', title: 'Residência em Cirurgia Vascular', institution: 'Hospital das Clínicas - FMUSP' },
+    { year: '2014', title: 'Fellowship em Cirurgia Endovascular', institution: 'Hospital Albert Einstein' },
+    { year: '2015', title: 'Fundação do Instituto Vascular', institution: 'Presidente Prudente, SP' },
   ],
 
-  // === AVALIAÇÕES (Google) ===
-  avaliacaoGoogle: '5.0',
-  totalAvaliacoes: '12+',
+  // === AVALIAÇÕES ===
+  avaliacaoGoogle: '4.9',
+  totalAvaliacoes: '320+',
 
   // === DEPOIMENTOS ===
   depoimentos: [
     {
-      text: 'Atendimento excelente, super bem localizado e com estacionamento próprio. Esclareceram todas as minhas dúvidas com muita paciência e profissionalismo.',
-      author: 'Andresa Louzada',
-      role: 'Cliente',
+      text: 'Fiz o tratamento de varizes com laser e o resultado superou minhas expectativas. Dr. Ricardo é extremamente atencioso e profissional.',
+      author: 'Maria Helena Santos',
+      role: 'Paciente - Varizes',
     },
     {
-      text: 'Excelência no atendimento, profissionalismo, qualidade e confiança. Altamente recomendado para quem procura serviços jurídicos confiáveis.',
-      author: 'Raquel Martin Louzada',
-      role: 'Cliente',
+      text: 'Após anos sofrendo com dores nas pernas, finalmente encontrei o diagnóstico correto. O tratamento foi rápido e eficaz.',
+      author: 'Carlos Eduardo Ferreira',
+      role: 'Paciente - Insuficiência Venosa',
     },
     {
-      text: 'Muito esclarecedor. Prestaram um excelente atendimento e resolveram meu problema por um preço justo. Recomendo a todos.',
-      author: 'Julio Prestes',
-      role: 'Cliente',
+      text: 'Atendimento humanizado de verdade. Dr. Ricardo explica tudo com muita clareza e paciência. Me senti segura durante todo o tratamento.',
+      author: 'Ana Paula Ribeiro',
+      role: 'Paciente - Escleroterapia',
     },
   ],
 
   // === REDES SOCIAIS ===
-  redesSociais: {
-    instagram: 'https://instagram.com/cerbelera.oliveira.adv',
-    facebook: 'https://facebook.com/cerbeleraoliveira.adv',
-    linkedin: '',
-    youtube: '',
-  },
-
-  // === IMAGENS ===
-  imagens: {
-    advogado: '/images/cerbelera_oliveira_team_photo.webp',
-    hero: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80',
-    escritorio:
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
-    logo: '/images/cerbelera_oliveira_logo_cover.webp',
-    logoAlt: '/images/cerbelera_oliveira_profile_photo.webp',
-    logoMini: '/images/cerbelera_oliveira_logo_cover.webp',
-  },
-
-  // === GOOGLE MAPS ===
-  googleMapsApiKey: '',
-  googleMapsUrl:
-    'https://maps.google.com/?q=R.+Francisco+Machado+de+Campos,+393+-+Vila+Nova,+Presidente+Prudente+-+SP,+19010-300',
+  instagram: 'https://instagram.com/institutovascular',
+  facebook: 'https://facebook.com/institutovascular',
 };
-
-export default SITE_CONFIG;

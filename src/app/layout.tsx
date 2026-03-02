@@ -4,41 +4,39 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import ChatBot from '@/components/ChatBot';
 import CookieBanner from '@/components/CookieBanner';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://cerbeleraeoliveiraadv.vercel.app'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://institutovascular.vercel.app'
   ),
   title: {
-    default:
-      'Cerbelera & Oliveira | Advogados em Presidente Prudente - SP',
-    template: '%s | Cerbelera & Oliveira Advogados',
+    default: 'Instituto Vascular Prudente | Cirurgia Vascular e Angiologia',
+    template: '%s | Instituto Vascular Prudente',
   },
   description:
-    'Cerbelera & Oliveira Advogados Associados – Escritório de Advocacia em Presidente Prudente, SP. Atuação estratégica e humanizada em Direito Trabalhista, Criminal, Civil, Empresarial e Administrativo.',
+    'Instituto Vascular Prudente - Clínica especializada em Cirurgia Vascular, Angiologia, tratamento de varizes, trombose e doenças vasculares em Presidente Prudente, SP.',
   keywords: [
-    'advogado Presidente Prudente',
-    'escritório de advocacia',
-    'direito trabalhista',
-    'direito criminal',
-    'direito civil',
-    'direito empresarial',
-    'direito administrativo',
-    'Cerbelera Oliveira',
-    'advogado SP',
+    'cirurgião vascular Presidente Prudente',
+    'angiologista Presidente Prudente',
+    'clínica vascular',
+    'tratamento de varizes',
+    'trombose venosa',
+    'cirurgia vascular',
+    'escleroterapia',
+    'doppler vascular',
+    'varizes a laser',
   ],
-  authors: [{ name: 'Cerbelera & Oliveira Advogados Associados' }],
+  authors: [{ name: 'Instituto Vascular Prudente' }],
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    siteName: 'Cerbelera & Oliveira Advogados',
-    title: 'Cerbelera & Oliveira | Advogados em Presidente Prudente - SP',
+    siteName: 'Instituto Vascular Prudente',
+    title: 'Instituto Vascular Prudente | Cirurgia Vascular e Angiologia',
     description:
-      'Escritório de Advocacia em Presidente Prudente. Atuação estratégica e humanizada em Direito Trabalhista, Criminal, Civil, Empresarial e Administrativo.',
+      'Clínica especializada em Cirurgia Vascular e Angiologia em Presidente Prudente, SP. Tratamento de varizes, trombose e doenças vasculares.',
   },
   robots: {
     index: true,
@@ -62,13 +60,12 @@ export default function RootLayout({
     <html lang="pt-BR" className={inter.className}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="theme-color" content="#1a1a1a" />
+        <meta name="theme-color" content="#115e59" />
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <ChatBot />
         <WhatsAppButton />
         <CookieBanner />
       </body>
