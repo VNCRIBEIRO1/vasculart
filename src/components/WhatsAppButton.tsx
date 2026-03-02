@@ -4,9 +4,9 @@ import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP || '5518996101884';
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP || '5518996228447';
   const message = encodeURIComponent(
-    'Olá! Gostaria de agendar uma consulta no Instituto Vascular Prudente.'
+    'Olá! Gostaria de agendar uma consulta na Clínica Vasculart.'
   );
 
   return (

@@ -35,7 +35,7 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-primary-200 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/10">
               <Stethoscope className="w-4 h-4" />
-              Cirurgia Vascular e Angiologia
+              Angiologia e Cirurgia Vascular
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
@@ -44,9 +44,9 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg text-primary-100/80 leading-relaxed mb-8 max-w-lg">
-              Instituto Vascular Prudente — referência em diagnóstico e
-              tratamento de doenças vasculares. Tecnologia de ponta, procedimentos
-              minimamente invasivos e cuidado humanizado.
+              Clínica Vasculart — referência em diagnóstico e
+              tratamento de doenças vasculares em Presidente Prudente desde 2009.
+              Dra. Fernanda Toreto: experiência, tecnologia e atendimento humanizado.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -63,9 +63,9 @@ export default function HeroSection() {
             </div>
 
             <div className="flex items-center gap-6 mt-8 text-primary-300/60 text-sm">
-              <span>CRM/SP 158.432</span>
+              <span>CRM/SP 78575</span>
               <span>•</span>
-              <span>RQE 72.891</span>
+              <span>RQE 41951</span>
             </div>
           </motion.div>
 
@@ -80,17 +80,17 @@ export default function HeroSection() {
               {
                 icon: Heart,
                 title: 'Varizes e Microvarizes',
-                desc: 'Tratamento com laser endovenoso e escleroterapia. Procedimentos ambulatoriais com recuperação rápida.',
+                desc: 'Escleroterapia, laser transdérmico, espuma densa e cirurgia. Tratamentos modernos com ótimos resultados.',
               },
               {
                 icon: Shield,
                 title: 'Diagnóstico Avançado',
-                desc: 'Ecodoppler Vascular de última geração para diagnóstico preciso e planejamento do tratamento.',
+                desc: 'Ecodoppler Vascular para diagnóstico preciso e planejamento individualizado do tratamento.',
               },
               {
                 icon: Award,
-                title: '+15 Anos de Experiência',
-                desc: 'Membro titular da SBACV. Especialização no Hospital das Clínicas da USP e Albert Einstein.',
+                title: '+30 Anos de Experiência',
+                desc: 'Desde 1998 em Presidente Prudente. Mestre em Ciências da Saúde e Professora da Unoeste.',
               },
             ].map((item, index) => (
               <motion.div

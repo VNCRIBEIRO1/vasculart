@@ -1,112 +1,145 @@
 // ============================================================
-// CONFIGURAÇÃO DA CLÍNICA - INSTITUTO VASCULAR PRUDENTE
+// CONFIGURAÇÃO DA CLÍNICA — CLÍNICA VASCULART
 // ============================================================
 
 export const SITE_CONFIG = {
   // === DADOS DA CLÍNICA ===
-  nome: 'Instituto Vascular',
-  nomeCompleto: 'Instituto Vascular Prudente',
-  nomeClinica: 'Instituto Vascular Prudente - Cirurgia Vascular e Angiologia',
-  crm: 'CRM/SP 158.432',
-  rqe: 'RQE 72.891',
+  nome: 'Clínica Vasculart',
+  nomeCompleto: 'Clínica Vasculart',
+  nomeClinica: 'Clínica Vasculart — Angiologia e Cirurgia Vascular',
+  razaoSocial: 'CLINICA VASCULART LTDA',
+  cnpj: '11.739.298/0001-72',
+  cnes: '6096514',
+  alvaraSanitario: '354140616-863-001921-1-2',
+  fundacao: '2009',
 
-  // === MÉDICO RESPONSÁVEL ===
-  medico: {
-    nome: 'Dr. Ricardo Mendes',
-    nomeCompleto: 'Dr. Ricardo Augusto Mendes',
-    especialidade: 'Cirurgião Vascular e Angiologista',
-    crm: 'CRM/SP 158.432',
-    rqe: 'RQE 72.891',
+  // === MÉDICA RESPONSÁVEL ===
+  medica: {
+    nome: 'Dra. Fernanda Toreto',
+    nomeCompleto: 'Dra. Fernanda Maria Bottino Vizzotto Toreto',
+    especialidade: 'Angiologista | Cirurgiã Vascular | Professora Universitária',
+    crm: 'CRM/SP 78575',
+    rqe: 'RQE 41951',
     titulacao: [
-      'Membro Titular da SBACV',
-      'Especialista em Cirurgia Endovascular',
-      'Fellowship em Cirurgia Vascular Minimamente Invasiva',
+      'Mestre em Ciências da Saúde — Unoeste',
+      'Professora do Curso de Medicina — Unoeste',
+      'Residência em Angiologia e Cirurgia Vascular — H. N. Sra. das Graças, Curitiba',
+      'Residência em Cirurgia Geral — Fac. Medicina de Marília',
+      'Graduação em Medicina — UEL, Londrina',
     ],
   },
 
   // === CONTATO ===
-  telefone: '(18) 3221-4500',
-  telefoneLink: '551832214500',
-  celular: '(18) 99610-1884',
-  celularLink: '5518996101884',
-  whatsapp: '5518996101884',
-  email: 'contato@institutovascular.med.br',
+  telefone: '(18) 3222-8447',
+  telefoneLink: '551832228447',
+  celular: '(18) 99622-8447',
+  celularLink: '5518996228447',
+  whatsapp: '5518996228447',
+  email: 'drafernandatoreto@gmail.com',
 
   // === ENDEREÇO ===
   endereco: {
-    rua: 'Av. Washington Luiz, 1200',
-    complemento: 'Sala 302 - Edifício Medical Center',
-    bairro: 'Centro',
+    rua: 'Rua Donato Armelin, 326',
+    complemento: 'Atrás da Santa Casa',
+    bairro: 'Vila Euclides',
     cidade: 'Presidente Prudente',
     estado: 'SP',
-    cep: '19010-090',
+    cep: '19013-810',
     completo:
-      'Av. Washington Luiz, 1200 - Sala 302, Edifício Medical Center - Centro, Presidente Prudente/SP',
+      'Rua Donato Armelin, 326 — Vila Euclides, Presidente Prudente/SP — CEP 19013-810',
   },
 
   // === HORÁRIO ===
-  horario: 'Segunda a Sexta, 08:00 às 18:00',
-  horarioSabado: 'Sábado, 08:00 às 12:00',
+  horarios: [
+    { dia: 'Segunda-Feira', horario: '08:00 – 18:00' },
+    { dia: 'Terça-Feira', horario: '08:00 – 19:00' },
+    { dia: 'Quarta-Feira', horario: '08:00 – 19:00' },
+    { dia: 'Quinta-Feira', horario: '08:00 – 19:00' },
+    { dia: 'Sexta-Feira', horario: '08:00 – 18:00' },
+    { dia: 'Sábado', horario: 'Fechado' },
+    { dia: 'Domingo', horario: 'Fechado' },
+  ],
+  horarioResumo: 'Seg e Sex: 08h–18h | Ter a Qui: 08h–19h',
 
   // === SITE / SEO ===
-  dominio: 'https://institutovascular.vercel.app',
+  dominio: 'https://clinica-ten-iota.vercel.app',
+  site: 'www.vasculart.com.br',
   descricaoSite:
-    'Instituto Vascular Prudente - Clínica especializada em Cirurgia Vascular, Angiologia, tratamento de varizes, trombose e doenças vasculares em Presidente Prudente, SP.',
+    'Clínica Vasculart — Angiologia e Cirurgia Vascular em Presidente Prudente, SP. Dra. Fernanda Vizzotto Toreto. Tratamento de varizes, escleroterapia, laser transdérmico, cirurgia vascular.',
   palavrasChave: [
-    'cirurgião vascular Presidente Prudente',
     'angiologista Presidente Prudente',
-    'clínica vascular',
+    'cirurgiã vascular Presidente Prudente',
+    'clínica vasculart',
     'tratamento de varizes',
-    'trombose venosa',
-    'cirurgia vascular',
     'escleroterapia',
-    'doppler vascular',
-    'varizes a laser',
+    'laser transdérmico',
+    'cirurgia vascular',
+    'Dra Fernanda Toreto',
+    'varizes Presidente Prudente',
+    'angiologia',
   ],
 
-  // === SOBRE ===
-  sobreResumo:
-    'Mais de 15 anos de experiência em Cirurgia Vascular e Angiologia, com atendimento humanizado e tecnologia de ponta.',
-  sobreHistoria: [
-    'O Instituto Vascular Prudente foi fundado com a missão de oferecer atendimento de excelência em cirurgia vascular e angiologia, combinando tecnologia avançada com cuidado humanizado.',
-    'Sob a liderança do Dr. Ricardo Mendes, cirurgião vascular com mais de 15 anos de experiência, a clínica se tornou referência regional no diagnóstico e tratamento de doenças vasculares.',
-    'Utilizamos equipamentos de última geração para exames como Ecodoppler Vascular e realizamos procedimentos minimamente invasivos, como laser endovenoso e escleroterapia.',
-    'Nosso compromisso é com a saúde vascular completa: da prevenção ao tratamento, cada paciente recebe atenção individualizada e as melhores soluções da medicina vascular moderna.',
+  // === AVALIAÇÕES ===
+  avaliacaoGoogle: '5',
+  totalAvaliacoes: '289+',
+  notaEsteticaGuia: '9.5',
+  recomendacaoFacebook: '92%',
+  seguidoresFacebook: '7.400+',
+
+  // === CONVÊNIOS ===
+  convenios: ['Particular', 'Unimed', 'Unoeste Saúde'],
+  formasPagamento: 'Cartão de crédito, débito e NFC',
+
+  // === HOSPITAIS VINCULADOS ===
+  hospitais: [
+    'Santa Casa de Presidente Prudente',
+    'Hospital Iamada',
+    'Unimed Mais Prudente',
+    'HIU - Hospital Infantil Unimed',
+    'Hospital Unimed',
+    'Centro Médico Especializado Garcia',
+  ],
+
+  // === INFRAESTRUTURA ===
+  infraestrutura: [
+    'Acessibilidade total para cadeirantes',
+    'Estacionamento gratuito no local e na rua',
+    'Banheiro de gênero neutro',
+    'Espaço inclusivo (LGBTQ+)',
+    'Aceita cartão de crédito, débito e NFC',
+    'Agendamento prévio recomendado',
   ],
 
   // === FORMAÇÃO ===
   formacao: [
-    { year: '2008', title: 'Graduação em Medicina', institution: 'UNESP - Botucatu' },
-    { year: '2011', title: 'Residência em Cirurgia Geral', institution: 'Hospital das Clínicas - FMUSP' },
-    { year: '2013', title: 'Residência em Cirurgia Vascular', institution: 'Hospital das Clínicas - FMUSP' },
-    { year: '2014', title: 'Fellowship em Cirurgia Endovascular', institution: 'Hospital Albert Einstein' },
-    { year: '2015', title: 'Fundação do Instituto Vascular', institution: 'Presidente Prudente, SP' },
+    { year: '1987–1993', title: 'Graduação em Medicina', institution: 'Universidade Estadual de Londrina (UEL)' },
+    { year: '1994–1996', title: 'Residência em Cirurgia Geral', institution: 'Faculdade de Medicina de Marília' },
+    { year: '1996–1998', title: 'Residência em Angiologia e Cirurgia Vascular', institution: 'Hospital Nossa Senhora das Graças — Curitiba' },
+    { year: '2009', title: 'Fundação da Clínica Vasculart', institution: 'Presidente Prudente, SP' },
+    { year: '2015', title: 'Extensão Universitária em Medicina', institution: 'Unoeste' },
+    { year: '2021–2023', title: 'Mestrado em Ciências da Saúde', institution: 'Universidade do Oeste Paulista (Unoeste)' },
   ],
-
-  // === AVALIAÇÕES ===
-  avaliacaoGoogle: '4.9',
-  totalAvaliacoes: '320+',
 
   // === DEPOIMENTOS ===
   depoimentos: [
     {
-      text: 'Fiz o tratamento de varizes com laser e o resultado superou minhas expectativas. Dr. Ricardo é extremamente atencioso e profissional.',
-      author: 'Maria Helena Santos',
-      role: 'Paciente - Varizes',
+      text: 'Dra. Fernanda é uma profissional incrível! Fez meu tratamento de varizes com muita competência e carinho. Recomendo de olhos fechados.',
+      author: 'Patrícia M.',
+      role: 'Paciente — Varizes',
     },
     {
-      text: 'Após anos sofrendo com dores nas pernas, finalmente encontrei o diagnóstico correto. O tratamento foi rápido e eficaz.',
-      author: 'Carlos Eduardo Ferreira',
-      role: 'Paciente - Insuficiência Venosa',
+      text: 'Atendimento humanizado e com total discrição. Me senti muito acolhida na Clínica Vasculart. Dra. Fernanda é extremamente atenciosa.',
+      author: 'Luciana R.',
+      role: 'Paciente — Escleroterapia',
     },
     {
-      text: 'Atendimento humanizado de verdade. Dr. Ricardo explica tudo com muita clareza e paciência. Me senti segura durante todo o tratamento.',
-      author: 'Ana Paula Ribeiro',
-      role: 'Paciente - Escleroterapia',
+      text: 'Depois de anos sofrendo com dores e inchaço nas pernas, finalmente encontrei o tratamento certo. Dra. Fernanda mudou minha qualidade de vida.',
+      author: 'Maria A.',
+      role: 'Paciente — Insuficiência Venosa',
     },
   ],
 
   // === REDES SOCIAIS ===
-  instagram: 'https://instagram.com/institutovascular',
-  facebook: 'https://facebook.com/institutovascular',
+  instagram: 'https://instagram.com/clinicavasculart',
+  facebook: 'https://facebook.com/ClinicaVasculart',
 };

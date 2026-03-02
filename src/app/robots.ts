@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://institutovascular.com.br/sitemap.xml',
+    sitemap: 'https://www.vasculart.com.br/sitemap.xml',
   };
 }

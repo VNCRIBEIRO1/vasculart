@@ -1,5 +1,5 @@
 // ============================================================
-// ARTIGOS — INSTITUTO VASCULAR PRUDENTE
+// ARTIGOS — CLÍNICA VASCULART
 // ============================================================
 
 export interface Article {
@@ -23,7 +23,7 @@ export const articles: Article[] = [
     category: 'Varizes',
     date: '25 Fev 2025',
     readTime: '7 min',
-    author: 'Dr. Ricardo Mendes',
+    author: 'Dra. Fernanda Toreto',
     image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80',
     content: `
       <p>As varizes são veias dilatadas e tortuosas que surgem principalmente nos membros inferiores. Afetam cerca de 30% da população adulta brasileira e são mais comuns em mulheres. Embora muitas pessoas as considerem apenas um problema estético, as varizes podem indicar uma condição mais séria chamada insuficiência venosa crônica.</p>
@@ -56,7 +56,7 @@ export const articles: Article[] = [
     category: 'Trombose',
     date: '20 Fev 2025',
     readTime: '6 min',
-    author: 'Dr. Ricardo Mendes',
+    author: 'Dra. Fernanda Toreto',
     image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80',
     content: `
       <p>A Trombose Venosa Profunda (TVP) é a formação de um coágulo sanguíneo dentro de uma veia profunda, geralmente nos membros inferiores. É uma condição potencialmente grave que requer diagnóstico e tratamento urgentes, pois o coágulo pode se desprender e causar embolia pulmonar.</p>
@@ -88,7 +88,7 @@ export const articles: Article[] = [
     category: 'Escleroterapia',
     date: '15 Fev 2025',
     readTime: '5 min',
-    author: 'Dr. Ricardo Mendes',
+    author: 'Dra. Fernanda Toreto',
     image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&q=80',
     content: `
       <p>A escleroterapia é um dos procedimentos mais realizados na medicina vascular. Consiste na injeção de uma substância esclerosante dentro das veias doentes, provocando o fechamento e absorção da veia pelo organismo.</p>
@@ -122,7 +122,7 @@ export const articles: Article[] = [
     category: 'Insuficiência Venosa',
     date: '10 Fev 2025',
     readTime: '6 min',
-    author: 'Dr. Ricardo Mendes',
+    author: 'Dra. Fernanda Toreto',
     image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80',
     content: `
       <p>A insuficiência venosa crônica (IVC) é uma condição na qual as veias das pernas não conseguem bombear o sangue de volta ao coração adequadamente. Afeta até 50% das mulheres e 30% dos homens ao longo da vida.</p>
@@ -152,7 +152,7 @@ export const articles: Article[] = [
     category: 'Doença Arterial',
     date: '05 Fev 2025',
     readTime: '6 min',
-    author: 'Dr. Ricardo Mendes',
+    author: 'Dra. Fernanda Toreto',
     image: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80',
     content: `
       <p>A doença arterial periférica (DAP) é uma condição na qual as artérias que levam sangue para as pernas ficam estreitadas devido ao acúmulo de placas de gordura (aterosclerose). Afeta cerca de 10% da população acima de 55 anos.</p>
@@ -182,7 +182,7 @@ export const articles: Article[] = [
     category: 'Saúde Vascular',
     date: '01 Fev 2025',
     readTime: '5 min',
-    author: 'Dr. Ricardo Mendes',
+    author: 'Dra. Fernanda Toreto',
     image: 'https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&q=80',
     content: `
       <p>O angiologista e o cirurgião vascular são os especialistas do sistema circulatório — artérias, veias e vasos linfáticos. Muitas doenças vasculares são silenciosas e, diagnosticadas tardiamente, podem trazer complicações graves.</p>

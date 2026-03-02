@@ -42,14 +42,14 @@ export default function Header() {
         <div className="bg-primary-800">
           <div className="container-custom py-1.5 flex justify-between items-center text-xs">
             <span className="text-primary-100 font-medium tracking-wide">
-              CRM/SP 158.432 • Cirurgia Vascular e Angiologia
+              CRM/SP 78575 • Angiologia e Cirurgia Vascular
             </span>
             <a
-              href="tel:+5518996101884"
+              href="tel:+5518996228447"
               className="flex items-center gap-1.5 text-white hover:text-primary-200 transition-colors font-medium"
             >
               <Phone className="w-3 h-3" />
-              (18) 99610-1884
+              (18) 99622-8447
             </a>
           </div>
         </div>
@@ -67,12 +67,12 @@ export default function Header() {
               <h1 className={`text-lg font-serif font-bold leading-tight transition-colors ${
                 scrolled ? 'text-primary-800' : 'text-white'
               }`}>
-                Instituto Vascular
+                Clínica Vasculart
               </h1>
               <p className={`text-[10px] tracking-wider uppercase transition-colors ${
                 scrolled ? 'text-primary-600' : 'text-primary-200'
               }`}>
-                Cirurgia Vascular & Angiologia
+                Angiologia & Cirurgia Vascular
               </p>
             </div>
           </Link>

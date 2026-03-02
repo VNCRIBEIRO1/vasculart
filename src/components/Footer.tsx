@@ -3,10 +3,10 @@ import { MapPin, Phone, Mail, Clock, Heart } from 'lucide-react';
 
 const especialidades = [
   'Varizes e Microvarizes',
+  'Escleroterapia',
+  'Laser Transdérmico',
   'Trombose Venosa',
   'Cirurgia Vascular',
-  'Escleroterapia',
-  'Doppler Vascular',
   'Doença Arterial',
 ];
 
@@ -32,7 +32,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-white font-serif font-bold text-lg">
-                  Instituto Vascular
+                  Clínica Vasculart
                 </h3>
                 <p className="text-xs tracking-wider uppercase text-primary-300">
                   Presidente Prudente
@@ -40,12 +40,12 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-primary-300 text-sm leading-relaxed mb-4">
-              Clínica especializada em Cirurgia Vascular e Angiologia, oferecendo
-              diagnóstico e tratamento de doenças vasculares com tecnologia de
-              ponta e atendimento humanizado.
+              Referência em Angiologia e Cirurgia Vascular em Presidente Prudente
+              desde 2009. Atendimento humanizado, tecnologia moderna e excelência
+              no cuidado vascular.
             </p>
             <p className="text-primary-400 text-sm font-medium">
-              CRM/SP 158.432 • RQE 72.891
+              CRM/SP 78575 • RQE 41951
             </p>
           </div>
 
@@ -96,37 +96,48 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
                 <span className="text-primary-300 text-sm">
-                  Av. Washington Luiz, 1200
+                  Rua Donato Armelin, 326
                   <br />
-                  Sala 302 - Ed. Medical Center
+                  Vila Euclides — Atrás da Santa Casa
                   <br />
-                  Centro - Presidente Prudente/SP
+                  Presidente Prudente/SP
                 </span>
               </li>
               <li>
                 <a
-                  href="tel:+5518996101884"
+                  href="tel:+551832228447"
                   className="flex items-center gap-3 text-primary-300 hover:text-white transition-colors text-sm"
                 >
                   <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                  (18) 99610-1884
+                  (18) 3222-8447
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contato@institutovascular.med.br"
+                  href="https://wa.me/5518996228447"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-primary-300 hover:text-white transition-colors text-sm"
+                >
+                  <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
+                  (18) 99622-8447 (WhatsApp)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:drafernandatoreto@gmail.com"
                   className="flex items-center gap-3 text-primary-300 hover:text-white transition-colors text-sm"
                 >
                   <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                  contato@institutovascular.med.br
+                  drafernandatoreto@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
                 <span className="text-primary-300 text-sm">
-                  Seg a Sex: 08:00 – 18:00
+                  Seg e Sex: 08:00 – 18:00
                   <br />
-                  Sáb: 08:00 – 12:00
+                  Ter a Qui: 08:00 – 19:00
                 </span>
               </li>
             </ul>
@@ -134,7 +145,7 @@ export default function Footer() {
             {/* Redes Sociais */}
             <div className="mt-6 flex items-center gap-4">
               <a
-                href="https://instagram.com/institutovascular"
+                href="https://instagram.com/clinicavasculart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-300 hover:text-white transition-colors"
@@ -145,7 +156,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com/institutovascular"
+                href="https://facebook.com/ClinicaVasculart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-300 hover:text-white transition-colors"
@@ -164,12 +175,10 @@ export default function Footer() {
       <div className="border-t border-primary-800/50">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-400 text-xs text-center md:text-left">
-            © {new Date().getFullYear()} Instituto Vascular Prudente. Todos os
-            direitos reservados.
+            © {new Date().getFullYear()} Clínica Vasculart. Todos os direitos reservados.
           </p>
           <p className="text-primary-500 text-xs text-center">
-            Responsável Técnico: Dr. Ricardo Augusto Mendes — CRM/SP 158.432 |
-            RQE 72.891
+            Responsável Técnica: Dra. Fernanda M. B. Vizzotto Toreto — CRM/SP 78575 | RQE 41951
           </p>
         </div>
       </div>

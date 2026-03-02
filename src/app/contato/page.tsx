@@ -32,7 +32,7 @@ const infoCards = [
   {
     icon: Clock,
     title: 'Horário',
-    lines: ['Segunda a Sexta: 8h às 18h', 'Sábados: 8h às 12h'],
+    lines: ['Seg e Sex: 08h às 18h', 'Ter a Qui: 08h às 19h', 'Sáb e Dom: Fechado'],
   },
 ];
 
@@ -117,7 +117,7 @@ export default function ContatoPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Localização do Instituto Vascular Prudente"
+                  title="Localização da Clínica Vasculart"
                 />
               </div>
             </AnimatedSection>
@@ -155,10 +155,10 @@ export default function ContatoPage() {
                     Convênios e Formas de Pagamento
                   </h3>
                   <p className="text-secondary-500 text-sm leading-relaxed">
-                    Atendemos Unimed, SulAmérica, Bradesco Saúde, Amil, e outros
-                    convênios. Também oferecemos atendimento particular com
-                    condições especiais de pagamento. Consulte nossa equipe para
-                    mais detalhes.
+                    Atendemos Unimed, Unoeste Saúde e pacientes particulares.
+                    Aceitamos cartão de crédito, débito e pagamento por
+                    aproximação (NFC). Consulte nossa equipe para mais
+                    detalhes.
                   </p>
                 </div>
               </div>

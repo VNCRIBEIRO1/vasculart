@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { articles } from '@/lib/articles';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://institutovascular.com.br';
+  const baseUrl = 'https://www.vasculart.com.br';
 
   const staticPages: MetadataRoute.Sitemap = [
     {

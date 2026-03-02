@@ -10,33 +10,36 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://institutovascular.vercel.app'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vasculart.com.br'
   ),
   title: {
-    default: 'Instituto Vascular Prudente | Cirurgia Vascular e Angiologia',
-    template: '%s | Instituto Vascular Prudente',
+    default: 'Clínica Vasculart | Angiologia e Cirurgia Vascular em Presidente Prudente',
+    template: '%s | Clínica Vasculart',
   },
   description:
-    'Instituto Vascular Prudente - Clínica especializada em Cirurgia Vascular, Angiologia, tratamento de varizes, trombose e doenças vasculares em Presidente Prudente, SP.',
+    'Clínica Vasculart — Angiologia e Cirurgia Vascular em Presidente Prudente, SP. Dra. Fernanda Toreto, CRM/SP 78575. Varizes, trombose, escleroterapia, laser vascular. Desde 2009.',
   keywords: [
-    'cirurgião vascular Presidente Prudente',
     'angiologista Presidente Prudente',
-    'clínica vascular',
+    'cirurgião vascular Presidente Prudente',
+    'clínica vascular Presidente Prudente',
+    'Clínica Vasculart',
+    'Dra Fernanda Toreto',
     'tratamento de varizes',
     'trombose venosa',
-    'cirurgia vascular',
     'escleroterapia',
+    'laser transdérmico',
+    'espuma densa varizes',
+    'cirurgia vascular',
     'doppler vascular',
-    'varizes a laser',
   ],
-  authors: [{ name: 'Instituto Vascular Prudente' }],
+  authors: [{ name: 'Clínica Vasculart' }],
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    siteName: 'Instituto Vascular Prudente',
-    title: 'Instituto Vascular Prudente | Cirurgia Vascular e Angiologia',
+    siteName: 'Clínica Vasculart',
+    title: 'Clínica Vasculart | Angiologia e Cirurgia Vascular em Presidente Prudente',
     description:
-      'Clínica especializada em Cirurgia Vascular e Angiologia em Presidente Prudente, SP. Tratamento de varizes, trombose e doenças vasculares.',
+      'Clínica Vasculart — Referência em Angiologia e Cirurgia Vascular em Presidente Prudente desde 2009. Dra. Fernanda Toreto, +30 anos de experiência.',
   },
   robots: {
     index: true,

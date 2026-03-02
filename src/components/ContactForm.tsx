@@ -119,9 +119,11 @@ export default function ContactForm() {
             <option value="trombose">Trombose Venosa</option>
             <option value="cirurgia">Cirurgia Vascular</option>
             <option value="escleroterapia">Escleroterapia</option>
+            <option value="espuma">Espuma Densa</option>
+            <option value="laser">Laser Transdérmico / Endovenoso</option>
             <option value="doppler">Doppler Vascular</option>
             <option value="arterial">Doença Arterial</option>
-            <option value="aneurisma">Aneurisma</option>
+            <option value="pe-diabetico">Pé Diabético</option>
             <option value="checkup">Check-up Vascular</option>
             <option value="outro">Outro</option>
           </select>

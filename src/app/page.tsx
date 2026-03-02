@@ -60,19 +60,19 @@ const services = [
 
 const testimonials = [
   {
-    text: 'Fiz o tratamento de varizes com laser e o resultado superou minhas expectativas. Dr. Ricardo é extremamente atencioso e profissional.',
-    author: 'Maria Helena Santos',
+    text: 'Dra. Fernanda é uma profissional excepcional! Me atendeu com muita atenção e cuidado. Recomendo de olhos fechados a todos que precisam de um angiologista.',
+    author: 'Sandra M.',
     role: 'Paciente - Varizes',
   },
   {
-    text: 'Após anos sofrendo com dores nas pernas, finalmente encontrei o diagnóstico correto. O tratamento foi rápido e eficaz.',
-    author: 'Carlos Eduardo Ferreira',
-    role: 'Paciente - Insuficiência Venosa',
+    text: 'Melhor clínica vascular de Prudente! A Dra. Fernanda explicou tudo com clareza e o tratamento foi excelente. Nota 10!',
+    author: 'Roberto C.',
+    role: 'Paciente - Escleroterapia',
   },
   {
-    text: 'Atendimento humanizado de verdade. Dr. Ricardo explica tudo com muita clareza e paciência. Me senti segura durante todo o tratamento.',
-    author: 'Ana Paula Ribeiro',
-    role: 'Paciente - Escleroterapia',
+    text: 'Profissional maravilhosa, atenciosa e competente. Me senti acolhida desde a primeira consulta. Ambiente muito agradável e equipe dedicada.',
+    author: 'Luciana T.',
+    role: 'Paciente - Check-up Vascular',
   },
 ];
 
@@ -152,7 +152,7 @@ export default function HomePage() {
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
                   <Image
                     src={IMAGES.doctor}
-                    alt="Dr. Ricardo Mendes - Cirurgião Vascular"
+                    alt="Dra. Fernanda Toreto - Angiologista e Cirurgiã Vascular"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -164,32 +164,32 @@ export default function HomePage() {
                       <Star key={i} className="w-4 h-4 fill-white text-white" />
                     ))}
                   </div>
-                  <p className="text-sm font-medium">4.9 no Google</p>
-                  <p className="text-xs opacity-80">320+ avaliações</p>
+                  <p className="text-sm font-medium">5★ no Google</p>
+                  <p className="text-xs opacity-80">289+ avaliações</p>
                 </div>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
               <span className="inline-block text-sm font-medium text-primary-700 bg-primary-50 px-4 py-1.5 rounded-full mb-4">
-                Sobre o Instituto
+                Sobre a Clínica
               </span>
               <h2 className="section-title">
-                Excelência em Cirurgia Vascular e Angiologia
+                Referência em Angiologia e Cirurgia Vascular
               </h2>
               <p className="text-secondary-500 leading-relaxed mb-6">
-                O Instituto Vascular Prudente é referência regional em diagnóstico e
-                tratamento de doenças vasculares. Liderado pelo Dr. Ricardo Mendes,
-                cirurgião vascular com mais de 15 anos de experiência, oferecemos
-                atendimento humanizado com tecnologia de ponta.
+                A Clínica Vasculart é referência em Angiologia e Cirurgia Vascular
+                em Presidente Prudente desde 2009. Liderada pela Dra. Fernanda
+                Toreto, com mais de 30 anos de experiência e Mestre em Ciências da
+                Saúde, oferecemos atendimento humanizado com tecnologia de ponta.
               </p>
 
               <ul className="space-y-4 mb-8">
                 {[
-                  'Membro titular da SBACV',
-                  'Equipamentos de última geração',
+                  'Mestre em Ciências da Saúde',
+                  'Professora Universitária na Unoeste',
                   'Procedimentos minimamente invasivos',
-                  'Atendimento humanizado e personalizado',
+                  'Convênios: Unimed e Unoeste Saúde',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
@@ -199,7 +199,7 @@ export default function HomePage() {
               </ul>
 
               <Link href="/sobre" className="btn-primary">
-                Conheça o Dr. Ricardo
+                Conheça a Dra. Fernanda
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </AnimatedSection>
@@ -222,10 +222,10 @@ export default function HomePage() {
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Award, number: '15+', label: 'Anos de Experiência' },
-              { icon: Users, number: '5.000+', label: 'Pacientes Atendidos' },
-              { icon: Stethoscope, number: '8', label: 'Especialidades' },
-              { icon: Star, number: '4.9', label: 'Avaliação Google' },
+              { icon: Award, number: '30+', label: 'Anos de Experiência' },
+              { icon: Users, number: 'Desde 2009', label: 'Atuando em Prudente' },
+              { icon: Stethoscope, number: '5★', label: 'Avaliação Google' },
+              { icon: Star, number: '289+', label: 'Avaliações no Google' },
             ].map((stat, index) => (
               <AnimatedSection key={stat.label} delay={index * 0.1} className="text-center">
                 <div className="flex justify-center mb-3">
@@ -303,9 +303,9 @@ export default function HomePage() {
               Cuide da Sua Saúde Vascular
             </h2>
             <p className="text-primary-200 text-lg max-w-2xl mx-auto mb-8">
-              Agende sua consulta no Instituto Vascular Prudente. Diagnóstico
+              Agende sua consulta na Clínica Vasculart. Diagnóstico
               preciso, tratamentos modernos e acompanhamento completo para sua
-              saúde circulatória.
+              saúde vascular.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contato" className="btn-white text-base">
@@ -313,7 +313,7 @@ export default function HomePage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <a
-                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP || '5518996101884'}`}
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP || '5518996228447'}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline border-white/30 text-white hover:bg-white/10 text-base"
@@ -330,7 +330,7 @@ export default function HomePage() {
               <span>•</span>
               <span className="flex items-center gap-1">
                 <Clock className="w-4 h-4" />
-                Seg a Sex, 08h às 18h
+                Seg a Sex, 08h às 19h
               </span>
             </div>
           </AnimatedSection>
