@@ -2,8 +2,9 @@
 // Imagens do Unsplash (uso gratuito) + foto da médica
 
 export const IMAGES = {
-  // Foto da Dra. Fernanda (médica mulher, angiologista)
-  doctor: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80',
+  // Foto da Dra. Fernanda Vizzotto Toreto
+  // Substitua pela foto real: salve em public/images/dra-fernanda.jpg e altere o path abaixo
+  doctor: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80',
 
   // Hero background - Consultório médico moderno
   hero: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=1920&q=80',

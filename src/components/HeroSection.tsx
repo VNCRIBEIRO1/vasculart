@@ -3,134 +3,179 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, Heart, Shield, Award, Stethoscope } from 'lucide-react';
+import { ArrowRight, Heart, Shield, Award, Phone, MapPin, Star } from 'lucide-react';
 import { IMAGES } from '@/lib/images';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
-      {/* Background */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background com gradiente rico */}
+      <div className="absolute inset-0 gradient-hero" />
+
+      {/* Background image overlay */}
       <div className="absolute inset-0">
         <Image
           src={IMAGES.hero}
-          alt="Medicina Vascular"
+          alt=""
           fill
-          className="object-cover opacity-[0.15]"
+          className="object-cover opacity-[0.08] mix-blend-luminosity"
           priority
           sizes="100vw"
         />
       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary-400/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl" />
+      {/* Decorative orbs */}
+      <div className="absolute top-20 right-[20%] w-[500px] h-[500px] bg-primary-400/10 rounded-full blur-[120px]" />
+      <div className="absolute bottom-20 left-[10%] w-[400px] h-[400px] bg-accent-500/5 rounded-full blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-[150px]" />
 
-      <div className="container-custom relative z-10 pt-32 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Texto */}
+      <div className="container-custom relative z-10 pt-32 pb-24">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Coluna de texto */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="order-2 lg:order-1"
           >
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-primary-200 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/10">
-              <Stethoscope className="w-4 h-4" />
-              Angiologia e Cirurgia Vascular
-            </div>
+            {/* Badge com heartbeat */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-primary-200 px-5 py-2.5 rounded-full text-sm font-medium mb-8 border border-white/10"
+            >
+              <Heart className="w-4 h-4 text-accent-400 animate-heartbeat" />
+              Clínica Vasculart — Desde 2009
+            </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
-              Sua <span className="text-primary-300">Saúde Vascular</span>{' '}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-[1.1] mb-6">
+              Sua{' '}
+              <span className="text-gradient bg-gradient-to-r from-primary-300 via-primary-200 to-primary-300 bg-clip-text text-transparent">
+                Saúde Vascular
+              </span>
+              <br />
               em Boas Mãos
             </h1>
 
             <p className="text-lg text-primary-100/80 leading-relaxed mb-8 max-w-lg">
-              Clínica Vasculart — referência em diagnóstico e
-              tratamento de doenças vasculares em Presidente Prudente desde 2009.
-              Dra. Fernanda Toreto: experiência, tecnologia e atendimento humanizado.
+              Dra. Fernanda Vizzotto Toreto — Angiologista, Cirurgiã Vascular e
+              Mestre em Ciências da Saúde. Mais de 30 anos de experiência,
+              tecnologia avançada e atendimento humanizado.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contato" className="btn-primary text-base bg-primary-500 hover:bg-primary-600">
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <Link href="/contato" className="btn-heartbeat text-base group">
                 Agende sua Consulta
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                href="/especialidades"
-                className="btn-outline border-primary-300/50 text-primary-100 hover:bg-white/10 hover:text-white text-base"
+              <a
+                href="https://wa.me/5518996228447"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-4 border-2 border-white/20 text-white font-medium rounded-2xl hover:bg-white/10 transition-all duration-300 text-base backdrop-blur-sm"
               >
-                Nossas Especialidades
-              </Link>
+                <Phone className="w-5 h-5 mr-2" />
+                WhatsApp
+              </a>
             </div>
 
-            <div className="flex items-center gap-6 mt-8 text-primary-300/60 text-sm">
-              <span>CRM/SP 78575</span>
-              <span>•</span>
-              <span>RQE 41951</span>
+            {/* Credenciais */}
+            <div className="flex flex-wrap items-center gap-4 text-sm">
+              <span className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/10 text-primary-200">
+                <Shield className="w-4 h-4 text-primary-300" />
+                CRM/SP 78575
+              </span>
+              <span className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/10 text-primary-200">
+                <Award className="w-4 h-4 text-primary-300" />
+                RQE 41951
+              </span>
+              <span className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/10 text-primary-200">
+                <Star className="w-4 h-4 text-yellow-400" />
+                5★ Google (289+)
+              </span>
             </div>
           </motion.div>
 
-          {/* Cards de destaque */}
+          {/* Coluna da foto */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:grid grid-cols-1 gap-5"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="order-1 lg:order-2 flex justify-center"
           >
-            {[
-              {
-                icon: Heart,
-                title: 'Varizes e Microvarizes',
-                desc: 'Escleroterapia, laser transdérmico, espuma densa e cirurgia. Tratamentos modernos com ótimos resultados.',
-              },
-              {
-                icon: Shield,
-                title: 'Diagnóstico Avançado',
-                desc: 'Ecodoppler Vascular para diagnóstico preciso e planejamento individualizado do tratamento.',
-              },
-              {
-                icon: Award,
-                title: '+30 Anos de Experiência',
-                desc: 'Desde 1998 em Presidente Prudente. Mestre em Ciências da Saúde e Professora da Unoeste.',
-              },
-            ].map((item, index) => (
+            <div className="relative">
+              {/* Glow atrás da foto */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-primary-400/20 via-primary-500/10 to-transparent rounded-[2rem] blur-2xl" />
+
+              {/* Foto principal */}
+              <div className="relative w-[320px] h-[400px] md:w-[380px] md:h-[480px] lg:w-[420px] lg:h-[530px] rounded-[2rem] overflow-hidden shadow-2xl">
+                <Image
+                  src={IMAGES.doctor}
+                  alt="Dra. Fernanda Vizzotto Toreto — Angiologista e Cirurgiã Vascular"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                  sizes="(max-width: 768px) 320px, (max-width: 1024px) 380px, 420px"
+                />
+                {/* Gradiente sutil na base */}
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary-900/60 to-transparent" />
+
+                {/* Info na base da foto */}
+                <div className="absolute bottom-0 inset-x-0 p-6">
+                  <p className="text-white font-serif font-bold text-lg">
+                    Dra. Fernanda Toreto
+                  </p>
+                  <p className="text-primary-200 text-sm">
+                    Angiologista • Cirurgiã Vascular
+                  </p>
+                </div>
+              </div>
+
+              {/* Badge flutuante - Mestre */}
               <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-all duration-300"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -right-4 top-20 bg-white rounded-2xl shadow-xl px-4 py-3 border border-primary-100"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-primary-300" />
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center">
+                    <Award className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="text-primary-200/70 text-sm">{item.desc}</p>
+                    <p className="text-xs font-bold text-primary-800">Mestre</p>
+                    <p className="text-[10px] text-secondary-500">Ciências da Saúde</p>
                   </div>
                 </div>
               </motion.div>
-            ))}
+
+              {/* Badge flutuante - Professora */}
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                className="absolute -left-4 bottom-28 bg-white rounded-2xl shadow-xl px-4 py-3 border border-primary-100"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-accent-50 rounded-xl flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-accent-500" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-primary-800">30+ Anos</p>
+                    <p className="text-[10px] text-secondary-500">de Experiência</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Wave bottom */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg
-          viewBox="0 0 1440 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full"
-        >
-          <path
-            d="M0 120L48 110C96 100 192 80 288 70C384 60 480 60 576 65C672 70 768 80 864 85C960 90 1056 90 1152 85C1248 80 1344 70 1392 65L1440 60V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0Z"
-            fill="white"
-          />
-        </svg>
-      </div>
+      {/* Bottom curve - CSS only, sem SVG */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-20 bg-white"
+        style={{ clipPath: 'ellipse(75% 100% at 50% 100%)' }}
+      />
     </section>
   );
 }
