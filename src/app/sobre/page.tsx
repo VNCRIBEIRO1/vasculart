@@ -134,13 +134,13 @@ function getTimelineColor(type: string) {
     case 'media':
       return 'from-red-500 to-red-600';
     case 'milestone':
-      return 'from-yellow-500 to-amber-600';
+      return 'from-accent-500 to-accent-600';
     case 'digital':
       return 'from-blue-500 to-blue-600';
     case 'academic':
       return 'from-primary-500 to-primary-700';
     default:
-      return 'from-primary-600 to-primary-800';
+      return 'from-accent-600 to-primary-700';
   }
 }
 
@@ -148,7 +148,7 @@ export default function SobrePage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 gradient-hero relative overflow-hidden">
+      <section className="pt-32 pb-20 gradient-vascular relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 right-10 w-96 h-96 bg-primary-400 rounded-full blur-[120px]" />
         </div>
@@ -198,8 +198,8 @@ export default function SobrePage() {
                 </div>
 
                 {/* Badge flutuante - CRM */}
-                <div className="absolute -top-3 -left-3 bg-white px-4 py-2.5 rounded-xl shadow-lg border border-primary-100">
-                  <p className="text-xs font-bold text-primary-800">CRM/SP 78575</p>
+                <div className="absolute -top-3 -left-3 bg-white px-4 py-2.5 rounded-xl shadow-lg border border-accent-200">
+                  <p className="text-xs font-bold text-accent-700">CRM/SP 78575</p>
                   <p className="text-[10px] text-secondary-500">RQE 41951</p>
                 </div>
               </div>
@@ -256,8 +256,8 @@ export default function SobrePage() {
               return (
                 <AnimatedSection key={valor.title} delay={index * 0.1}>
                   <div className="card-glass p-8 text-center h-full">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-sm">
-                      <Icon className="w-8 h-8 text-primary-600" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-accent-50 to-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-sm border border-accent-100/50">
+                      <Icon className="w-8 h-8 text-accent-600" />
                     </div>
                     <h3 className="text-xl font-serif font-bold text-primary-800 mb-3">
                       {valor.title}
@@ -506,8 +506,8 @@ export default function SobrePage() {
                     key={item.event}
                     className="flex items-center gap-3 bg-white p-4 rounded-xl border border-secondary-100 shadow-sm hover:shadow-md transition-shadow"
                   >
-                    <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Calendar className="w-5 h-5 text-primary-500" />
+                    <div className="w-10 h-10 bg-accent-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Calendar className="w-5 h-5 text-accent-500" />
                     </div>
                     <div>
                       <p className="text-secondary-700 text-sm font-medium">{item.event}</p>
@@ -545,7 +545,7 @@ export default function SobrePage() {
             ].map((titulo, index) => (
               <AnimatedSection key={titulo} delay={index * 0.05}>
                 <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-secondary-100 shadow-sm">
-                  <CheckCircle2 className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-accent-500 flex-shrink-0" />
                   <p className="text-secondary-600 text-sm">{titulo}</p>
                 </div>
               </AnimatedSection>
@@ -587,7 +587,7 @@ export default function SobrePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 gradient-medical">
+      <section className="py-16 gradient-vascular">
         <div className="container-custom text-center">
           <AnimatedSection>
             <Heart className="w-10 h-10 text-primary-300 mx-auto mb-4 animate-heartbeat" />

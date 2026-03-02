@@ -10,7 +10,7 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 gradient-hero relative overflow-hidden">
+      <section className="pt-32 pb-20 gradient-vascular relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 left-1/2 w-96 h-96 bg-primary-400 rounded-full blur-3xl" />
         </div>
@@ -26,7 +26,7 @@ export default function BlogPage() {
             </h1>
             <p className="text-primary-100/80 text-lg max-w-2xl">
               Artigos informativos sobre saúde vascular, prevenção de doenças e
-              tratamentos modernos. Conteúdo escrito pelo Dr. Ricardo Mendes.
+              tratamentos modernos. Conteúdo pela Dra. Fernanda Toreto.
             </p>
           </AnimatedSection>
         </div>

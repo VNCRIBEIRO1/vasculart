@@ -47,6 +47,11 @@ export default function SectionHeader({
           {subtitle}
         </p>
       )}
+      {centered && (
+        <div className="flex justify-center mt-4">
+          <div className="h-1 w-16 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full" />
+        </div>
+      )}
     </div>
   );
 }

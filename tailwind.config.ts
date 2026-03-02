@@ -91,7 +91,7 @@ const config: Config = {
           '50%': { transform: 'translateY(-10px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(26, 74, 138, 0.3)' },
+          '0%': { boxShadow: '0 0 20px rgba(196, 30, 58, 0.3)' },
           '100%': { boxShadow: '0 0 40px rgba(26, 74, 138, 0.6)' },
         },
       },

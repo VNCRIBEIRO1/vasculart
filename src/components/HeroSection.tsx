@@ -26,7 +26,7 @@ export default function HeroSection() {
 
       {/* Decorative orbs */}
       <div className="absolute top-20 right-[20%] w-[500px] h-[500px] bg-primary-400/10 rounded-full blur-[120px]" />
-      <div className="absolute bottom-20 left-[10%] w-[400px] h-[400px] bg-accent-500/5 rounded-full blur-[100px]" />
+      <div className="absolute bottom-20 left-[10%] w-[400px] h-[400px] bg-accent-500/10 rounded-full blur-[100px]" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-[150px]" />
 
       <div className="container-custom relative z-10 pt-32 pb-24">
@@ -107,7 +107,7 @@ export default function HeroSection() {
           >
             <div className="relative">
               {/* Glow atrás da foto */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary-400/20 via-primary-500/10 to-transparent rounded-[2rem] blur-2xl" />
+              <div className="absolute -inset-4 bg-gradient-to-br from-accent-400/20 via-primary-500/10 to-transparent rounded-[2rem] blur-2xl" />
 
               {/* Foto principal */}
               <div className="relative w-[320px] h-[400px] md:w-[380px] md:h-[480px] lg:w-[420px] lg:h-[530px] rounded-[2rem] overflow-hidden shadow-2xl">
@@ -120,7 +120,7 @@ export default function HeroSection() {
                   sizes="(max-width: 768px) 320px, (max-width: 1024px) 380px, 420px"
                 />
                 {/* Gradiente sutil na base */}
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary-900/60 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-accent-900/40 via-primary-900/30 to-transparent" />
 
                 {/* Info na base da foto */}
                 <div className="absolute bottom-0 inset-x-0 p-6">
@@ -140,8 +140,8 @@ export default function HeroSection() {
                 className="absolute -right-4 top-20 bg-white rounded-2xl shadow-xl px-4 py-3 border border-primary-100"
               >
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center">
-                    <Award className="w-5 h-5 text-primary-600" />
+                  <div className="w-10 h-10 bg-accent-50 rounded-xl flex items-center justify-center">
+                    <Award className="w-5 h-5 text-accent-600" />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-primary-800">Mestre</p>

@@ -193,22 +193,23 @@ export default function EspecialidadesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 gradient-hero relative overflow-hidden">
+      <section className="pt-32 pb-20 gradient-vascular relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute bottom-10 left-10 w-72 h-72 bg-primary-400 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-72 h-72 bg-accent-400 rounded-full blur-3xl" />
+          <div className="absolute top-10 right-10 w-96 h-96 bg-primary-400 rounded-full blur-[120px]" />
         </div>
         <div className="container-custom relative z-10">
           <AnimatedSection>
-            <span className="inline-flex items-center gap-2 bg-white/10 text-primary-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Stethoscope className="w-4 h-4" />
+            <span className="inline-flex items-center gap-2 bg-white/10 text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/10">
+              <Heart className="w-4 h-4 text-accent-300 animate-heartbeat" />
               Nossas Especialidades
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
               Tratamentos em{' '}
-              <span className="text-primary-300">Cirurgia Vascular</span>
+              <span className="text-accent-300">Cirurgia Vascular</span>
             </h1>
             <p className="text-primary-100/80 text-lg max-w-2xl">
-              Conheça as principais áreas de atuação do Instituto Vascular Prudente.
+              Conheça as principais áreas de atuação da Clínica Vasculart.
               Diagnósticos precisos e tratamentos modernos para a sua saúde vascular.
             </p>
           </AnimatedSection>
@@ -230,11 +231,10 @@ export default function EspecialidadesPage() {
                     index < especialidades.length - 1 ? 'border-b border-secondary-100' : ''
                   }`}
                 >
-                  {/* Info */}
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-14 h-14 bg-primary-50 rounded-2xl flex items-center justify-center">
-                        <Icon className="w-7 h-7 text-primary-600" />
+                      <div className="w-14 h-14 bg-gradient-to-br from-accent-50 to-primary-50 rounded-2xl flex items-center justify-center border border-accent-100">
+                        <Icon className="w-7 h-7 text-accent-600" />
                       </div>
                       <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-800">
                         {esp.title}
@@ -243,16 +243,15 @@ export default function EspecialidadesPage() {
                     <p className="text-secondary-500 leading-relaxed mb-6">
                       {esp.description}
                     </p>
-
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
-                        <h3 className="text-sm font-bold text-primary-700 uppercase tracking-wider mb-3">
+                        <h3 className="text-sm font-bold text-accent-700 uppercase tracking-wider mb-3">
                           Sintomas e Indicações
                         </h3>
                         <ul className="space-y-2">
                           {esp.symptoms.map((s) => (
                             <li key={s} className="flex items-start gap-2 text-sm text-secondary-500">
-                              <CheckCircle2 className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
+                              <CheckCircle2 className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                               {s}
                             </li>
                           ))}
@@ -265,7 +264,7 @@ export default function EspecialidadesPage() {
                         <ul className="space-y-2">
                           {esp.treatments.map((t) => (
                             <li key={t} className="flex items-start gap-2 text-sm text-secondary-500">
-                              <Zap className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
+                              <Zap className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
                               {t}
                             </li>
                           ))}
@@ -273,20 +272,18 @@ export default function EspecialidadesPage() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Visual Card */}
                   <div className="flex-shrink-0 w-full lg:w-80">
-                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8 text-center">
-                      <Icon className="w-16 h-16 text-primary-600 mx-auto mb-4" />
+                    <div className="bg-gradient-to-br from-accent-50 via-primary-50 to-primary-100 rounded-2xl p-8 text-center border border-accent-100/50">
+                      <Icon className="w-16 h-16 text-accent-600 mx-auto mb-4" />
                       <h3 className="font-serif font-bold text-primary-800 mb-2">
                         {esp.title}
                       </h3>
-                      <p className="text-primary-600 text-sm mb-4">
+                      <p className="text-accent-600 text-sm mb-4">
                         Agende uma avaliação
                       </p>
                       <Link
                         href="/contato"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary-700 hover:text-primary-900 transition-colors"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-accent-600 px-5 py-2.5 rounded-xl hover:bg-accent-700 transition-colors shadow-md"
                       >
                         Marcar consulta
                         <ArrowRight className="w-4 h-4" />
@@ -301,9 +298,10 @@ export default function EspecialidadesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 gradient-medical">
+      <section className="py-16 gradient-vascular">
         <div className="container-custom text-center">
           <AnimatedSection>
+            <Heart className="w-10 h-10 text-accent-300 mx-auto mb-4 animate-heartbeat" />
             <h2 className="text-3xl font-serif font-bold text-white mb-4">
               Precisa de uma Avaliação?
             </h2>

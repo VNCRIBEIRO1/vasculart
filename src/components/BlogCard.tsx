@@ -41,7 +41,7 @@ export default function BlogCard({
           </div>
 
           <div className="p-6">
-            <span className="inline-block text-xs font-medium text-primary-700 bg-primary-50 px-3 py-1 rounded-full mb-3">
+            <span className="inline-block text-xs font-medium text-accent-700 bg-accent-50 px-3 py-1 rounded-full mb-3">
               {category}
             </span>
 
@@ -64,7 +64,7 @@ export default function BlogCard({
                   {readTime}
                 </span>
               </div>
-              <ArrowRight className="w-4 h-4 text-primary-500 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 text-accent-500 group-hover:translate-x-1 transition-transform" />
             </div>
           </div>
         </article>

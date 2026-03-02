@@ -51,7 +51,7 @@ export default function TestimonialCard({
         </p>
 
         <div className="flex items-center gap-3">
-          <div className="w-11 h-11 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center shadow-md">
+          <div className="w-11 h-11 bg-gradient-to-br from-accent-500 to-primary-700 rounded-full flex items-center justify-center shadow-md">
             <span className="text-white font-bold text-sm tracking-wide">
               {initials}
             </span>
@@ -62,7 +62,7 @@ export default function TestimonialCard({
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 opacity-60" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-400 via-accent-500 to-primary-500 opacity-80" />
       </div>
     </AnimatedSection>
   );

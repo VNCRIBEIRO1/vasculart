@@ -40,7 +40,7 @@ export default function ContatoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 gradient-hero relative overflow-hidden">
+      <section className="pt-32 pb-20 gradient-vascular relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 w-72 h-72 bg-primary-400 rounded-full blur-3xl" />
         </div>
@@ -71,8 +71,8 @@ export default function ContatoPage() {
               return (
                 <AnimatedSection key={info.title} delay={index * 0.1}>
                   <div className="card p-6 text-center border border-secondary-100 h-full">
-                    <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-6 h-6 text-primary-600" />
+                    <div className="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-6 h-6 text-accent-600" />
                     </div>
                     <h3 className="font-serif font-bold text-primary-800 mb-2">
                       {info.title}

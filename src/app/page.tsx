@@ -228,7 +228,7 @@ export default function HomePage() {
                   />
                 </div>
                 {/* Badge Google Reviews */}
-                <div className="absolute -bottom-5 -right-5 bg-white p-5 rounded-2xl shadow-xl border border-primary-100">
+                <div className="absolute -bottom-5 -right-5 bg-white p-5 rounded-2xl shadow-xl border border-accent-100">
                   <div className="flex items-center gap-1 mb-1">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -241,7 +241,7 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <span className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 bg-primary-50 px-4 py-1.5 rounded-full mb-4">
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-accent-700 bg-accent-50 px-4 py-1.5 rounded-full mb-4">
                 <Heart className="w-3.5 h-3.5 text-accent-500" />
                 Sobre a Clínica
               </span>
@@ -265,7 +265,7 @@ export default function HomePage() {
                   'Presença na Rede Globo e TV Band',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-accent-500 flex-shrink-0" />
                     <span className="text-secondary-600 text-sm">{item}</span>
                   </li>
                 ))}
@@ -289,15 +289,15 @@ export default function HomePage() {
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Award, number: '30+', label: 'Anos de Experiência' },
-              { icon: Heart, number: 'Desde 2009', label: 'Clínica Vasculart' },
-              { icon: Star, number: '5★', label: 'Avaliação Google' },
-              { icon: Users, number: '289+', label: 'Avaliações 5 Estrelas' },
+              { icon: Award, number: '30+', label: 'Anos de Experiência', iconColor: 'text-accent-300' },
+              { icon: Heart, number: 'Desde 2009', label: 'Clínica Vasculart', iconColor: 'text-accent-400' },
+              { icon: Star, number: '5★', label: 'Avaliação Google', iconColor: 'text-yellow-400' },
+              { icon: Users, number: '289+', label: 'Avaliações 5 Estrelas', iconColor: 'text-accent-300' },
             ].map((stat, index) => (
               <AnimatedSection key={stat.label} delay={index * 0.1} className="text-center">
                 <div className="flex justify-center mb-3">
                   <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/10">
-                    <stat.icon className="w-7 h-7 text-primary-300" />
+                    <stat.icon className={`w-7 h-7 ${stat.iconColor}`} />
                   </div>
                 </div>
                 <p className="text-3xl md:text-4xl font-bold text-white mb-1 font-serif">{stat.number}</p>
@@ -470,11 +470,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Final */}
-      <section className="py-20 gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-10 w-72 h-72 bg-primary-400 rounded-full blur-[100px]" />
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent-500 rounded-full blur-[100px]" />
-        </div>
+      <section className="py-20 gradient-vascular relative overflow-hidden">
 
         <div className="container-custom relative z-10 text-center">
           <AnimatedSection>

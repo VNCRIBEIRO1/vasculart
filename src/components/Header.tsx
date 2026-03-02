@@ -60,7 +60,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+            <div className="w-10 h-10 bg-gradient-to-br from-accent-500 to-primary-700 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
               <Heart className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -90,12 +90,12 @@ export default function Header() {
                 }`}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary-500 transition-all duration-300 group-hover:w-3/4" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent-500 transition-all duration-300 group-hover:w-3/4" />
               </Link>
             ))}
             <Link
               href="/contato"
-              className="ml-4 inline-flex items-center gap-1.5 text-sm font-semibold px-5 py-2.5 rounded-lg bg-primary-600 text-white shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 hover:bg-primary-700 transition-all duration-300 hover:-translate-y-0.5"
+              className="ml-4 inline-flex items-center gap-1.5 text-sm font-semibold px-5 py-2.5 rounded-lg bg-accent-600 text-white shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 hover:bg-accent-700 transition-all duration-300 hover:-translate-y-0.5"
             >
               Agende sua Consulta
               <ChevronRight className="w-4 h-4" />
@@ -142,7 +142,7 @@ export default function Header() {
               <Link
                 href="/contato"
                 onClick={() => setIsOpen(false)}
-                className="block py-3 px-4 mt-2 bg-primary-600 text-white text-center rounded-lg font-semibold text-sm shadow-lg"
+                className="block py-3 px-4 mt-2 bg-accent-600 text-white text-center rounded-lg font-semibold text-sm shadow-lg"
               >
                 Agende sua Consulta
               </Link>

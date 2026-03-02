@@ -15,7 +15,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   if (!article) return {};
 
   return {
-    title: `${article.title} | Instituto Vascular Prudente`,
+    title: `${article.title} | Clínica Vasculart`,
     description: article.excerpt,
     openGraph: {
       title: article.title,
@@ -35,7 +35,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 gradient-hero relative overflow-hidden">
+      <section className="pt-32 pb-16 gradient-vascular relative overflow-hidden">
         <div className="container-custom relative z-10">
           <Link
             href="/blog"
@@ -46,7 +46,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </Link>
 
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1 bg-white/10 text-primary-200 px-3 py-1 rounded-full text-xs font-medium mb-4">
+            <span className="inline-flex items-center gap-1 bg-accent-500/20 text-accent-200 px-3 py-1 rounded-full text-xs font-medium mb-4 border border-accent-400/20">
               <Tag className="w-3 h-3" />
               {article.category}
             </span>
@@ -98,7 +98,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline
                 prose-strong:text-primary-700
                 prose-li:text-secondary-600
-                prose-blockquote:border-primary-500 prose-blockquote:bg-primary-50 prose-blockquote:rounded-r-xl prose-blockquote:py-1
+                prose-blockquote:border-accent-500 prose-blockquote:bg-accent-50 prose-blockquote:rounded-r-xl prose-blockquote:py-1
               "
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
@@ -131,7 +131,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
-                  <span className="text-xs text-primary-600 font-medium">
+                  <span className="text-xs text-accent-600 font-medium">
                     {related.category}
                   </span>
                   <h3 className="text-sm font-serif font-bold text-primary-800 mt-1 line-clamp-2 group-hover:text-primary-600 transition-colors">

@@ -21,13 +21,14 @@ const links = [
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-primary-900 to-primary-950 text-primary-100">
+      <div className="h-1 bg-gradient-to-r from-accent-500 via-accent-600 to-primary-600" />
       {/* Conteúdo principal */}
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Coluna 1 - Sobre */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-primary-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-accent-500 to-primary-600 rounded-xl flex items-center justify-center">
                 <Heart className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -177,6 +178,15 @@ export default function Footer() {
           <p className="text-primary-400 text-xs text-center md:text-left">
             © {new Date().getFullYear()} Clínica Vasculart. Todos os direitos reservados.
           </p>
+          <div className="flex items-center gap-4 text-primary-400 text-xs">
+            <Link href="/politica-privacidade" className="hover:text-white transition-colors">
+              Política de Privacidade
+            </Link>
+            <span>•</span>
+            <Link href="/termos-de-uso" className="hover:text-white transition-colors">
+              Termos de Uso
+            </Link>
+          </div>
           <p className="text-primary-500 text-xs text-center">
             Responsável Técnica: Dra. Fernanda M. B. Vizzotto Toreto — CRM/SP 78575 | RQE 41951
           </p>
