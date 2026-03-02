@@ -290,7 +290,7 @@ export default function SobrePage() {
               <div className="group card-elevated h-full">
                 <div className="relative h-56 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
+                    src="https://images.unsplash.com/photo-1766224242540-836020f0c64e?auto=format&fit=crop&w=800&q=80"
                     alt="Reportagem Rede Globo — Clínica Vasculart"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -331,7 +331,7 @@ export default function SobrePage() {
               <div className="group card-elevated h-full">
                 <div className="relative h-56 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1585399058947-f0cc4d3ce0a1?auto=format&fit=crop&w=800&q=80"
+                    src="https://images.unsplash.com/photo-1602743297108-4c9061884285?auto=format&fit=crop&w=800&q=80"
                     alt="Entrevista TV Band — Dra. Fernanda Toreto"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

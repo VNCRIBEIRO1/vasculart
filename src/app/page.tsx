@@ -123,7 +123,7 @@ const mediaItems = [
     title: '"Cuidando de suas Varizes"',
     description:
       'Reportagem especial sobre tratamento de varizes com participação da Clínica Vasculart. Publicada em novembro de 2012.',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1766224242540-836020f0c64e?auto=format&fit=crop&w=600&q=80',
   },
   {
     icon: Tv,
@@ -135,7 +135,7 @@ const mediaItems = [
     title: 'Programa "Band Mulher"',
     description:
       'Dra. Fernanda entrevistada pela apresentadora Gisele Gontijo sobre inchaço nas pernas e nos pés (19/01/2018).',
-    image: 'https://images.unsplash.com/photo-1585399058947-f0cc4d3ce0a1?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1602743297108-4c9061884285?auto=format&fit=crop&w=600&q=80',
   },
   {
     icon: GraduationCap,
